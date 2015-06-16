@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arduino_Servo", "Arduino_Servo\Arduino_Servo.vbproj", "{CB8807E6-415D-44CB-9A32-C37CBA118402}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Arduino_Servo", "..\..\..\..\Desktop\SSR-copy\VisualStudioFiles\Arduino_Servo\Arduino_Servo\Arduino_Servo.vbproj", "{CB8807E6-415D-44CB-9A32-C37CBA118402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
