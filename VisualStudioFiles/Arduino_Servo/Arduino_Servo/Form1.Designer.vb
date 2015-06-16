@@ -30,6 +30,10 @@ Partial Class Form1
         Me.blink = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+=======
+        Me.SpeakFritz = New System.Windows.Forms.Button()
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.EyeRight = New System.Windows.Forms.Button()
         Me.HeadLeft = New System.Windows.Forms.Button()
         Me.Oh = New System.Windows.Forms.Button()
@@ -40,11 +44,24 @@ Partial Class Form1
         Me.HeadRight = New System.Windows.Forms.Button()
         Me.Nice = New System.Windows.Forms.Button()
         Me.Cool = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+=======
+        Me.Script2 = New System.Windows.Forms.Button()
+        Me.Burp = New System.Windows.Forms.Button()
+        Me.NotAgain = New System.Windows.Forms.Button()
+        Me.Script3 = New System.Windows.Forms.Button()
+        Me.Script1 = New System.Windows.Forms.Button()
+        Me.Yawn = New System.Windows.Forms.Button()
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Submit = New System.Windows.Forms.Button()
         Me.HeadUp = New System.Windows.Forms.Button()
         Me.HeadDown = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+=======
+        Me.Convo1 = New System.Windows.Forms.Button()
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Wink = New System.Windows.Forms.Button()
         Me.Confused = New System.Windows.Forms.Button()
         Me.Surprised = New System.Windows.Forms.Button()
@@ -90,6 +107,11 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.FaveLabel1 = New System.Windows.Forms.Label()
         Me.Fave1 = New System.Windows.Forms.ComboBox()
+<<<<<<< HEAD
+=======
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Fave2 = New System.Windows.Forms.TextBox()
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.FaveSubmit = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -98,6 +120,7 @@ Partial Class Form1
         Me.School3 = New System.Windows.Forms.Button()
         Me.School4 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Fave2 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -109,6 +132,8 @@ Partial Class Form1
         Me.Game2 = New System.Windows.Forms.Button()
         Me.Lego2 = New System.Windows.Forms.Button()
         Me.Lego1 = New System.Windows.Forms.Button()
+=======
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.SuspendLayout()
         '
         'smile
@@ -165,6 +190,18 @@ Partial Class Form1
         Me.Button1.Text = "btn90L"
         Me.Button1.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+=======
+        'SpeakFritz
+        '
+        Me.SpeakFritz.Location = New System.Drawing.Point(949, 216)
+        Me.SpeakFritz.Name = "SpeakFritz"
+        Me.SpeakFritz.Size = New System.Drawing.Size(51, 34)
+        Me.SpeakFritz.TabIndex = 5
+        Me.SpeakFritz.Text = "SpeakFritz!"
+        Me.SpeakFritz.UseVisualStyleBackColor = True
+        '
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         'EyeRight
         '
         Me.EyeRight.Location = New System.Drawing.Point(230, 113)
@@ -210,7 +247,11 @@ Partial Class Form1
         Me.StopButton.BackColor = System.Drawing.Color.Red
         Me.StopButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopButton.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.StopButton.Location = New System.Drawing.Point(717, 505)
+=======
+        Me.StopButton.Location = New System.Drawing.Point(711, 352)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.StopButton.Margin = New System.Windows.Forms.Padding(0)
         Me.StopButton.Name = "StopButton"
         Me.StopButton.Size = New System.Drawing.Size(194, 46)
@@ -268,6 +309,69 @@ Partial Class Form1
         Me.Cool.Text = "Cool"
         Me.Cool.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+=======
+        'Script2
+        '
+        Me.Script2.Location = New System.Drawing.Point(949, 292)
+        Me.Script2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Script2.Name = "Script2"
+        Me.Script2.Size = New System.Drawing.Size(56, 34)
+        Me.Script2.TabIndex = 17
+        Me.Script2.Text = "Script2"
+        Me.Script2.UseVisualStyleBackColor = True
+        '
+        'Burp
+        '
+        Me.Burp.Location = New System.Drawing.Point(949, 469)
+        Me.Burp.Margin = New System.Windows.Forms.Padding(2)
+        Me.Burp.Name = "Burp"
+        Me.Burp.Size = New System.Drawing.Size(56, 19)
+        Me.Burp.TabIndex = 18
+        Me.Burp.Text = "Burp"
+        Me.Burp.UseVisualStyleBackColor = True
+        '
+        'NotAgain
+        '
+        Me.NotAgain.Location = New System.Drawing.Point(949, 404)
+        Me.NotAgain.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotAgain.Name = "NotAgain"
+        Me.NotAgain.Size = New System.Drawing.Size(62, 19)
+        Me.NotAgain.TabIndex = 19
+        Me.NotAgain.Text = "Not Again"
+        Me.NotAgain.UseVisualStyleBackColor = True
+        '
+        'Script3
+        '
+        Me.Script3.Location = New System.Drawing.Point(949, 330)
+        Me.Script3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Script3.Name = "Script3"
+        Me.Script3.Size = New System.Drawing.Size(56, 34)
+        Me.Script3.TabIndex = 20
+        Me.Script3.Text = "Script3"
+        Me.Script3.UseVisualStyleBackColor = True
+        '
+        'Script1
+        '
+        Me.Script1.Location = New System.Drawing.Point(949, 255)
+        Me.Script1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Script1.Name = "Script1"
+        Me.Script1.Size = New System.Drawing.Size(56, 34)
+        Me.Script1.TabIndex = 21
+        Me.Script1.Text = "Script1"
+        Me.Script1.UseVisualStyleBackColor = True
+        '
+        'Yawn
+        '
+        Me.Yawn.Location = New System.Drawing.Point(949, 436)
+        Me.Yawn.Margin = New System.Windows.Forms.Padding(2)
+        Me.Yawn.Name = "Yawn"
+        Me.Yawn.Size = New System.Drawing.Size(56, 19)
+        Me.Yawn.TabIndex = 22
+        Me.Yawn.Text = "Yawn"
+        Me.Yawn.UseVisualStyleBackColor = True
+        '
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(109, 449)
@@ -316,6 +420,19 @@ Partial Class Form1
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+=======
+        'Convo1
+        '
+        Me.Convo1.Location = New System.Drawing.Point(949, 369)
+        Me.Convo1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Convo1.Name = "Convo1"
+        Me.Convo1.Size = New System.Drawing.Size(56, 24)
+        Me.Convo1.TabIndex = 29
+        Me.Convo1.Text = "Convo1"
+        Me.Convo1.UseVisualStyleBackColor = True
+        '
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         'Wink
         '
         Me.Wink.Location = New System.Drawing.Point(230, 171)
@@ -553,7 +670,11 @@ Partial Class Form1
         Me.Pause.BackColor = System.Drawing.Color.Gold
         Me.Pause.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pause.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.Pause.Location = New System.Drawing.Point(717, 456)
+=======
+        Me.Pause.Location = New System.Drawing.Point(711, 303)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Pause.Margin = New System.Windows.Forms.Padding(0)
         Me.Pause.Name = "Pause"
         Me.Pause.Size = New System.Drawing.Size(88, 40)
@@ -566,7 +687,11 @@ Partial Class Form1
         Me.ResumeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ResumeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResumeButton.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.ResumeButton.Location = New System.Drawing.Point(817, 456)
+=======
+        Me.ResumeButton.Location = New System.Drawing.Point(811, 303)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.ResumeButton.Margin = New System.Windows.Forms.Padding(0)
         Me.ResumeButton.Name = "ResumeButton"
         Me.ResumeButton.Size = New System.Drawing.Size(94, 40)
@@ -578,7 +703,11 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
         Me.Label7.Location = New System.Drawing.Point(746, 429)
+=======
+        Me.Label7.Location = New System.Drawing.Point(740, 276)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(127, 13)
         Me.Label7.TabIndex = 54
@@ -666,7 +795,11 @@ Partial Class Form1
         '
         'DontLikeSubmit
         '
+<<<<<<< HEAD
         Me.DontLikeSubmit.Location = New System.Drawing.Point(603, 334)
+=======
+        Me.DontLikeSubmit.Location = New System.Drawing.Point(626, 330)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.DontLikeSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.DontLikeSubmit.Name = "DontLikeSubmit"
         Me.DontLikeSubmit.Size = New System.Drawing.Size(56, 20)
@@ -676,16 +809,27 @@ Partial Class Form1
         '
         'DontLikeBox
         '
+<<<<<<< HEAD
         Me.DontLikeBox.Location = New System.Drawing.Point(403, 334)
         Me.DontLikeBox.Margin = New System.Windows.Forms.Padding(2)
         Me.DontLikeBox.Name = "DontLikeBox"
         Me.DontLikeBox.Size = New System.Drawing.Size(196, 20)
+=======
+        Me.DontLikeBox.Location = New System.Drawing.Point(397, 330)
+        Me.DontLikeBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.DontLikeBox.Name = "DontLikeBox"
+        Me.DontLikeBox.Size = New System.Drawing.Size(225, 20)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.DontLikeBox.TabIndex = 67
         '
         'DontLikeLabel
         '
         Me.DontLikeLabel.AutoSize = True
+<<<<<<< HEAD
         Me.DontLikeLabel.Location = New System.Drawing.Point(337, 337)
+=======
+        Me.DontLikeLabel.Location = New System.Drawing.Point(331, 333)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.DontLikeLabel.Name = "DontLikeLabel"
         Me.DontLikeLabel.Size = New System.Drawing.Size(55, 13)
         Me.DontLikeLabel.TabIndex = 66
@@ -693,7 +837,11 @@ Partial Class Form1
         '
         'LikeSubmit
         '
+<<<<<<< HEAD
         Me.LikeSubmit.Location = New System.Drawing.Point(603, 307)
+=======
+        Me.LikeSubmit.Location = New System.Drawing.Point(626, 303)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.LikeSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.LikeSubmit.Name = "LikeSubmit"
         Me.LikeSubmit.Size = New System.Drawing.Size(56, 20)
@@ -703,16 +851,27 @@ Partial Class Form1
         '
         'LikeBox
         '
+<<<<<<< HEAD
         Me.LikeBox.Location = New System.Drawing.Point(371, 307)
         Me.LikeBox.Margin = New System.Windows.Forms.Padding(2)
         Me.LikeBox.Name = "LikeBox"
         Me.LikeBox.Size = New System.Drawing.Size(228, 20)
+=======
+        Me.LikeBox.Location = New System.Drawing.Point(365, 303)
+        Me.LikeBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.LikeBox.Name = "LikeBox"
+        Me.LikeBox.Size = New System.Drawing.Size(257, 20)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.LikeBox.TabIndex = 64
         '
         'LikeLabel
         '
         Me.LikeLabel.AutoSize = True
+<<<<<<< HEAD
         Me.LikeLabel.Location = New System.Drawing.Point(337, 310)
+=======
+        Me.LikeLabel.Location = New System.Drawing.Point(331, 306)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.LikeLabel.Name = "LikeLabel"
         Me.LikeLabel.Size = New System.Drawing.Size(29, 13)
         Me.LikeLabel.TabIndex = 63
@@ -722,7 +881,11 @@ Partial Class Form1
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
         Me.Label10.Location = New System.Drawing.Point(340, 280)
+=======
+        Me.Label10.Location = New System.Drawing.Point(334, 276)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(109, 13)
         Me.Label10.TabIndex = 69
@@ -731,7 +894,11 @@ Partial Class Form1
         'FaveLabel1
         '
         Me.FaveLabel1.AutoSize = True
+<<<<<<< HEAD
         Me.FaveLabel1.Location = New System.Drawing.Point(337, 363)
+=======
+        Me.FaveLabel1.Location = New System.Drawing.Point(331, 359)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.FaveLabel1.Name = "FaveLabel1"
         Me.FaveLabel1.Size = New System.Drawing.Size(59, 13)
         Me.FaveLabel1.TabIndex = 70
@@ -742,6 +909,7 @@ Partial Class Form1
         Me.Fave1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.Fave1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.Fave1.FormattingEnabled = True
+<<<<<<< HEAD
         Me.Fave1.Items.AddRange(New Object() {"animal", "book", "color", "flavor", "food", "game", "movie", "sport", "TV show"})
         Me.Fave1.Location = New System.Drawing.Point(403, 363)
         Me.Fave1.Name = "Fave1"
@@ -751,6 +919,34 @@ Partial Class Form1
         'FaveSubmit
         '
         Me.FaveSubmit.Location = New System.Drawing.Point(603, 359)
+=======
+        Me.Fave1.Items.AddRange(New Object() {"animal", "book", "character", "color", "flavor", "food", "game", "movie", "TV show"})
+        Me.Fave1.Location = New System.Drawing.Point(397, 359)
+        Me.Fave1.Name = "Fave1"
+        Me.Fave1.Size = New System.Drawing.Size(104, 21)
+        Me.Fave1.TabIndex = 71
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(507, 362)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(14, 13)
+        Me.Label11.TabIndex = 72
+        Me.Label11.Text = "is"
+        '
+        'Fave2
+        '
+        Me.Fave2.Location = New System.Drawing.Point(526, 356)
+        Me.Fave2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Fave2.Name = "Fave2"
+        Me.Fave2.Size = New System.Drawing.Size(96, 20)
+        Me.Fave2.TabIndex = 73
+        '
+        'FaveSubmit
+        '
+        Me.FaveSubmit.Location = New System.Drawing.Point(626, 356)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.FaveSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.FaveSubmit.Name = "FaveSubmit"
         Me.FaveSubmit.Size = New System.Drawing.Size(56, 20)
@@ -772,7 +968,11 @@ Partial Class Form1
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
         Me.Label12.Location = New System.Drawing.Point(13, 280)
+=======
+        Me.Label12.Location = New System.Drawing.Point(13, 276)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(57, 13)
         Me.Label12.TabIndex = 76
@@ -780,7 +980,11 @@ Partial Class Form1
         '
         'School1
         '
+<<<<<<< HEAD
         Me.School1.Location = New System.Drawing.Point(16, 306)
+=======
+        Me.School1.Location = New System.Drawing.Point(16, 302)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.School1.Name = "School1"
         Me.School1.Size = New System.Drawing.Size(101, 23)
         Me.School1.TabIndex = 77
@@ -789,7 +993,11 @@ Partial Class Form1
         '
         'School2
         '
+<<<<<<< HEAD
         Me.School2.Location = New System.Drawing.Point(16, 335)
+=======
+        Me.School2.Location = New System.Drawing.Point(16, 331)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.School2.Name = "School2"
         Me.School2.Size = New System.Drawing.Size(101, 23)
         Me.School2.TabIndex = 78
@@ -798,7 +1006,11 @@ Partial Class Form1
         '
         'School3
         '
+<<<<<<< HEAD
         Me.School3.Location = New System.Drawing.Point(16, 366)
+=======
+        Me.School3.Location = New System.Drawing.Point(16, 362)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.School3.Name = "School3"
         Me.School3.Size = New System.Drawing.Size(101, 23)
         Me.School3.TabIndex = 79
@@ -807,7 +1019,11 @@ Partial Class Form1
         '
         'School4
         '
+<<<<<<< HEAD
         Me.School4.Location = New System.Drawing.Point(16, 395)
+=======
+        Me.School4.Location = New System.Drawing.Point(16, 391)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.School4.Name = "School4"
         Me.School4.Size = New System.Drawing.Size(101, 23)
         Me.School4.TabIndex = 80
@@ -824,6 +1040,7 @@ Partial Class Form1
         Me.Label13.TabIndex = 81
         Me.Label13.Text = "FREE SPEECH"
         '
+<<<<<<< HEAD
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -923,10 +1140,13 @@ Partial Class Form1
         Me.Lego1.Text = "Lego"
         Me.Lego1.UseVisualStyleBackColor = True
         '
+=======
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(940, 564)
         Me.Controls.Add(Me.Lego2)
         Me.Controls.Add(Me.Lego1)
@@ -937,6 +1157,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Party1)
         Me.Controls.Add(Me.Beach1)
         Me.Controls.Add(Me.Label14)
+=======
+        Me.ClientSize = New System.Drawing.Size(933, 564)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.School4)
         Me.Controls.Add(Me.School3)
@@ -989,11 +1212,24 @@ Partial Class Form1
         Me.Controls.Add(Me.Surprised)
         Me.Controls.Add(Me.Confused)
         Me.Controls.Add(Me.Wink)
+<<<<<<< HEAD
+=======
+        Me.Controls.Add(Me.Convo1)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.HeadDown)
         Me.Controls.Add(Me.HeadUp)
         Me.Controls.Add(Me.Submit)
         Me.Controls.Add(Me.TextBox1)
+<<<<<<< HEAD
+=======
+        Me.Controls.Add(Me.Yawn)
+        Me.Controls.Add(Me.Script1)
+        Me.Controls.Add(Me.Script3)
+        Me.Controls.Add(Me.NotAgain)
+        Me.Controls.Add(Me.Burp)
+        Me.Controls.Add(Me.Script2)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Controls.Add(Me.Cool)
         Me.Controls.Add(Me.Nice)
         Me.Controls.Add(Me.HeadRight)
@@ -1004,6 +1240,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Oh)
         Me.Controls.Add(Me.HeadLeft)
         Me.Controls.Add(Me.EyeRight)
+<<<<<<< HEAD
+=======
+        Me.Controls.Add(Me.SpeakFritz)
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.blink)
         Me.Controls.Add(Me.neutral)
@@ -1022,6 +1262,10 @@ Partial Class Form1
     Friend WithEvents blink As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+<<<<<<< HEAD
+=======
+    Friend WithEvents SpeakFritz As System.Windows.Forms.Button
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
     Friend WithEvents EyeRight As System.Windows.Forms.Button
     Friend WithEvents HeadLeft As System.Windows.Forms.Button
     Friend WithEvents Oh As System.Windows.Forms.Button
@@ -1032,11 +1276,24 @@ Partial Class Form1
     Friend WithEvents HeadRight As System.Windows.Forms.Button
     Friend WithEvents Nice As System.Windows.Forms.Button
     Friend WithEvents Cool As System.Windows.Forms.Button
+<<<<<<< HEAD
+=======
+    Friend WithEvents Script2 As System.Windows.Forms.Button
+    Friend WithEvents Burp As System.Windows.Forms.Button
+    Friend WithEvents NotAgain As System.Windows.Forms.Button
+    Friend WithEvents Script3 As System.Windows.Forms.Button
+    Friend WithEvents Script1 As System.Windows.Forms.Button
+    Friend WithEvents Yawn As System.Windows.Forms.Button
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Submit As System.Windows.Forms.Button
     Friend WithEvents HeadUp As System.Windows.Forms.Button
     Friend WithEvents HeadDown As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+<<<<<<< HEAD
+=======
+    Friend WithEvents Convo1 As System.Windows.Forms.Button
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
     Friend WithEvents Wink As System.Windows.Forms.Button
     Friend WithEvents Confused As System.Windows.Forms.Button
     Friend WithEvents Surprised As System.Windows.Forms.Button
@@ -1082,6 +1339,11 @@ Partial Class Form1
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents FaveLabel1 As System.Windows.Forms.Label
     Friend WithEvents Fave1 As System.Windows.Forms.ComboBox
+<<<<<<< HEAD
+=======
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Fave2 As System.Windows.Forms.TextBox
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
     Friend WithEvents FaveSubmit As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -1090,6 +1352,7 @@ Partial Class Form1
     Friend WithEvents School3 As System.Windows.Forms.Button
     Friend WithEvents School4 As System.Windows.Forms.Button
     Friend WithEvents Label13 As System.Windows.Forms.Label
+<<<<<<< HEAD
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Fave2 As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
@@ -1101,5 +1364,7 @@ Partial Class Form1
     Friend WithEvents Game2 As System.Windows.Forms.Button
     Friend WithEvents Lego2 As System.Windows.Forms.Button
     Friend WithEvents Lego1 As System.Windows.Forms.Button
+=======
+>>>>>>> 4d73d8f571a99a917b95b3123439b1631a330b46
 
 End Class
