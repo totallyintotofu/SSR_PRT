@@ -18,7 +18,7 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         SerialPort1.Close()
-        SerialPort1.PortName = "COM5" 'define your port
+        SerialPort1.PortName = "COM6" 'define your port
         SerialPort1.BaudRate = 9600
         SerialPort1.DataBits = 8
         SerialPort1.Parity = Parity.None

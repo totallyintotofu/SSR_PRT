@@ -88,14 +88,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\Form1.vb">
+    <Compile Include="Form1.Designer.vb">
       <SubType>Form</SubType>
-      <Link>Form1.vb</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
-      <Link>Form1.Designer.vb</Link>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -120,6 +117,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
     <EmbeddedResource Include="..\..\..\..\..\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
       <Link>Form1.resx</Link>
@@ -127,6 +126,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+>>>>>>> d9d96450a14a7c51522984309af476ea489ca9a0
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

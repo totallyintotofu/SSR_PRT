@@ -101,3 +101,14 @@ C:\Users\TIL\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Deb
 C:\Users\TIL\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Form1.resources
 C:\Users\TIL\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Resources.resources
 C:\Users\TIL\Documents\SSR\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.GenerateResource.Cache
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Interop.TextAloud_3.dll
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.ResolveComReference.cache
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Elves.wav
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.exe
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.pdb
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.xml
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Resources.resources
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.GenerateResource.Cache
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.exe
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.xml
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.pdb
