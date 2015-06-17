@@ -57,11 +57,11 @@ void loop()
         myservo3.attach(3);
        
         myservo8.write(100);   // 
-        myservo10.write(-30);  // 
-        myservo9.write(220);   // 
+        myservo10.write(20);  // 
+        myservo9.write(350);   // 
         myservo12.write(10);   //
         myservo11.write(75);    // 
-        myservoA0.write(40);   //
+        myservoA0.write(150);   //
         myservoA1.write(15);  
         myservo6.write(25); // 
         myservo7.write(68);  // 
@@ -109,8 +109,8 @@ void loop()
         myservo4.write(130);
         myservo5.write(60);
         myservo10.write(150);  // left lip down
-        myservo9.write(10);  // right lip down
-        myservoA0.write(20);
+        myservo9.write(70);  // right lip down
+        myservoA0.write(150);
         myservoA1.write(15);
         myservo3.write(100);
         delay(400);
@@ -144,7 +144,7 @@ void loop()
         
         myservo8.write(115);  // 
         myservo10.write(60);  // 
-        myservo9.write(120);  // 
+        myservo9.write(170);  // 
 
         delay(100);
         myservo7.write(68);  //  
@@ -153,7 +153,7 @@ void loop()
         myservo4.write(130); //
         myservo5.write(60);  // 
         delay(100);
-        myservoA0.write(40); // 
+        myservoA0.write(150); // 
         myservoA1.write(15); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -182,9 +182,9 @@ void loop()
         
         
          myservoA0.write(0);
-         myservoA1.write(70);
+         myservoA1.write(100);
          delay(150);
-         myservoA0.write(40); //open eyelid
+         myservoA0.write(150); //open eyelid
          myservoA1.write(15);
          delay(150);
          
@@ -260,7 +260,7 @@ void loop()
          myservoA0.attach(A0); //  
         myservoA1.attach(A1);
         myservo11.write(50); 
-        myservoA0.write(40); //  
+        myservoA0.write(150); //  
         myservoA1.write(15);   // head left
         delay(350);
         myservo11.detach();
@@ -272,7 +272,7 @@ void loop()
         myservo11.attach(11);
         myservoA0.attach(A0); //  
         myservoA1.attach(A1);
-        myservoA0.write(40); //  
+        myservoA0.write(150); //  
         myservoA1.write(15);
         myservo11.write(110);   // head right
         delay(350);
@@ -348,8 +348,8 @@ void loop()
         myservo9.write(220);   // 
         myservo12.write(10);   //
         myservo11.write(75);    // 
-        myservoA0.write(40);   //
-        myservoA1.write(15);   //
+        myservoA0.write(150);   //
+        myservoA1.write(80);   //
         myservo3.write(130);
         delay(400);
         
@@ -392,7 +392,7 @@ void loop()
         myservo2.write(115);
         myservo8.write(115);  // 
         myservo10.write(-20);  // 
-        myservo9.write(10);  // 
+        myservo9.write(70);  // 
         delay(100);
         myservo7.write(95);  //  
         myservo6.write(52);  // 
@@ -400,7 +400,7 @@ void loop()
         myservo4.write(60); //
         myservo5.write(90);  // 
         delay(100);
-        myservoA0.write(140); // 
+        myservoA0.write(170); // 
         myservoA1.write(50); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -438,11 +438,11 @@ void loop()
         myservo3.attach(3);
         
         myservo2.write(130);
-        myservoA0.write(130);   //
+        myservoA0.write(170);   //
         myservoA1.write(-20);   //
         myservo8.write(80);   // 
         myservo10.write(60);  // 
-        myservo9.write(120);   // 
+        myservo9.write(350);   // 
         myservo12.write(10);   //
         myservo11.write(75);    // 
         myservo6.write(25); // 
@@ -483,12 +483,12 @@ void loop()
         myservo3.attach(3);
         
         myservo10.write(145);  // left lip down
-        myservo9.write(35);  // right lip down
+        myservo9.write(70);  // right lip down
         myservo8.write(90);
         //myservo12.write(110); // left eyebrow sad
         //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(13);
-        myservoA1.write(40);
+        myservoA0.write(100);
+        myservoA1.write(80);
         myservo2.write(30);  
         myservo6.write(25); // 
         myservo7.write(67);  // 
@@ -530,7 +530,7 @@ void loop()
         myservo2.write(130);
         myservo8.write(90);  // 
         myservo10.write(-20);  // 
-        myservo9.write(10);  // 
+        myservo9.write(350);  // 
         //myservo.write(80);  // 
         //myservo.write(100); //
         delay(100);
@@ -539,8 +539,9 @@ void loop()
         delay(200);
         myservo4.write(170); //
         myservo5.write(25);  // 
-        delay(100);myservo3.attach(3);
-        myservoA0.write(90); // 
+        delay(100);
+        myservo3.attach(3);
+        myservoA0.write(190); // 
         myservoA1.write(40); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -589,7 +590,7 @@ void loop()
         myservo4.write(130); //
         myservo5.write(60);  // 
         delay(100);
-        myservoA0.write(30); // 
+        myservoA0.write(110); // 
         myservoA1.write(30); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -640,7 +641,7 @@ void loop()
         myservo4.write(40); //
         myservo5.write(25);  // 
         delay(100);
-        myservoA0.write(20); // 
+        myservoA0.write(90); // 
         myservoA1.write(40); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -683,11 +684,11 @@ void loop()
         myservo7.write(67);  // 
         myservo4.write(160);
         myservo5.write(30);
-        myservo10.write(100);  // left lip down
-        myservo9.write(50);  // right lip down
+        myservo10.write(140);  // left lip down
+        myservo9.write(70);  // right lip down
         //myservo12.write(110); // left eyebrow sad
         //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(20);
+        myservoA0.write(150);
         myservoA1.write(15);
         myservo8.write(105);
         myservo3.write(100);
@@ -726,7 +727,7 @@ void loop()
         myservo2.write(100);
         myservo8.write(100);  // 
         myservo10.write(148);  // left lip down
-        myservo9.write(18);  // right lip down
+        myservo9.write(170);  // right lip down
         delay(100);
         myservo7.write(67);  //  
         myservo6.write(25);  // 
@@ -734,7 +735,7 @@ void loop()
         myservo4.write(130); //
         myservo5.write(60);  // 
         delay(100);
-        myservoA0.write(10); // 
+        myservoA0.write(75); // 
         myservoA1.write(50); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -772,11 +773,11 @@ void loop()
         myservo3.attach(3);
         
         myservo10.write(145);  // left lip down
-        myservo9.write(18);  // right lip down
+        myservo9.write(78);  // right lip down
         myservo8.write(70);
         //myservo12.write(110); // left eyebrow sad
         //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(15);
+        myservoA0.write(170);
         myservoA1.write(45);
         myservo6.write(25); // 
         myservo7.write(67);  // 
@@ -818,11 +819,11 @@ void loop()
         myservo3.attach(3);
         
         myservo10.write(145);  // left lip down
-        myservo9.write(18);  // right lip down
+        myservo9.write(70);  // right lip down
         myservo8.write(70);
         //myservo12.write(110); // left eyebrow sad
         //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(10);
+        myservoA0.write(70);
         myservoA1.write(55);
         myservo6.write(25); // 
         myservo7.write(67);  // 
@@ -872,7 +873,7 @@ void loop()
         myservo8.write(70);
         //myservo12.write(110); // left eyebrow sad
         //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(40);
+        myservoA0.write(150);
         myservoA1.write(15);
         myservo6.write(25); // 
         myservo7.write(67);  // 
@@ -940,7 +941,7 @@ void loop()
         myservo5.write(60);
       
         delay(100);
-        myservoA0.write(40); // 
+        myservoA0.write(150); // 
         myservoA1.write(15); //
         myservo12.write(20); // 
         myservo11.write(75);  //
@@ -978,7 +979,7 @@ void loop()
         myservo3.attach(3);
         
         myservo2.write(130);
-        myservoA0.write(130);   //
+        myservoA0.write(170);   //
         myservoA1.write(-20);   //
         myservo10.write(-5);  // 
         myservo9.write(180);   // 
@@ -1036,7 +1037,7 @@ void loop()
         myservo11.attach(11);
         myservoA0.attach(A0); //  
         myservoA1.attach(A1);
-        myservoA0.write(40); //  
+        myservoA0.write(150); //  
         myservoA1.write(15);
         myservo11.write(110);   // head right
         delay(250);
@@ -1046,7 +1047,403 @@ void loop()
         delay(4000);         
       }
     
+      else if(pos=='U') {
+        // I CAN BLINK MY EYES        
+         myservoA0.attach(A0);
+         myservoA1.attach(A1);
+        
+        
+         myservoA0.write(0);
+         myservoA1.write(100);
+         delay(150);
+         myservoA0.write(150); //open eyelid
+         myservoA1.write(15);
+         delay(150);
+         
+         myservoA0.detach();
+         myservoA1.detach();
+         delay(200);
+         
+          myservoA0.attach(A0);
+         myservoA1.attach(A1);
+        
+        
+         myservoA0.write(0);
+         myservoA1.write(100);
+         delay(150);
+         myservoA0.write(150); //open eyelid
+         myservoA1.write(15);
+         delay(150);
+         
+         myservoA0.detach();
+         myservoA1.detach();
+      }
+         
+      else if(pos=='V') {
+        //I CAN TURN MY HEAD!
+        myservo11.attach(11);
+         myservoA0.attach(A0); //  
+        myservoA1.attach(A1);
+        myservo11.write(50); 
+        myservoA0.write(150); //  
+        myservoA1.write(15);   // head left
+        delay(350);
+        myservo11.detach();
+        myservoA0.detach(); //  
+        myservoA1.detach();
+        delay(300);
+        myservo11.attach(11);
+        myservoA0.attach(A0); //  
+        myservoA1.attach(A1);
+        myservoA0.write(150); //  
+        myservoA1.write(15);
+        myservo11.write(110);   // head right
+        delay(350);
+        myservo11.detach();
+         myservoA0.detach(); //  
+        myservoA1.detach();
+        delay(100);
+      }  
+   else if(pos=='W') {
+        // I CAN CAN ALSO BE VERY SILLY! LOOK AT ALL THE FUNNY FACES I CAN MAKE!
+        //1) funny face 2) loopy eyes 3) cross eyed
+        myservo8.attach(8); //
+        myservo10.attach(10); // 
+        myservo9.attach(9); // 
+        myservo12.attach(12); // 
+        myservo11.attach(11);  //
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1); // 
+        myservo2.attach(2);
+        myservo3.attach(3);
+        
+        myservo2.write(115);
+        myservo8.write(80);  // 
+        myservo10.write(-30);  // 
+        myservo9.write(350);  // 
+        //myservo.write(80);  // 
+        //myservo.write(100); //
+        delay(100);
+        myservo7.write(-30);  //  
+        myservo6.write(70);  // 
+        delay(200);
+        myservo4.write(40); //
+        myservo5.write(25);  // 
+        delay(100);
+        myservoA0.write(90); // 
+        myservoA1.write(40); //
+        myservo12.write(20); // 
+        myservo11.write(75);  //
+        myservo3.write(140);
+        delay(150);
+        
+        myservo2.detach();
+        myservo8.detach(); // 
+        myservo10.detach(); // 
+        myservo9.detach(); // 
+        //myservo12.detach(); //
+        myservo11.detach();  // 
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();  // up down
+        myservoA0.detach(); // 
+        myservoA1.detach(); // 
+        myservo3.detach();
+        //end funny face 
+        delay(400);
+        myservo8.attach(8); //
+        myservo10.attach(10); // 
+        myservo9.attach(9); // 
+        myservo12.attach(12); // 
+        myservo11.attach(11);  //
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1); // 
+        myservo2.attach(2);
+        myservo3.attach(3);
+        
+        myservo8.write(90);  // 
+        myservo10.write(100);  // 
+        myservo9.write(120);  // 
+
+        delay(100);
+        myservo7.write(68);  //
+        myservo6.write(25);  
+        delay(100);  
+        myservo6.write(80);// 
+        myservo7.write(0); 
+        delay(100);  
+        myservo4.write(130); //
+        myservo5.write(60);
+        delay(100);  
+        myservo4.write(35); //
+        myservo5.write(0);
+        delay(100);  
+        myservo6.write(-60);// 
+        myservo7.write(110); 
+        delay(100);  
+        myservo4.write(130); //
+        myservo5.write(60);
+      
+        delay(100);
+        myservoA0.write(150); // 
+        myservoA1.write(15); //
+        myservo12.write(20); // 
+        myservo11.write(75);  //
+        myservo2.write(100);
+        myservo3.write(130);
+        //end next face
+        delay(400);
+        
+        myservo8.detach(); // 
+        myservo10.detach(); // 
+        myservo9.detach(); // 
+        myservo11.detach();  // 
+        myservo6.detach(); // 
+        myservo7.detach();  // 
+        myservo4.detach(); // 
+        myservo5.detach();  // 
+        myservoA0.detach(); // 
+        myservoA1.detach(); // 
+        myservo2.detach();
+        myservo3.detach();
+        delay(200);
+        
+      myservo8.attach(8); //
+        myservo10.attach(10); // 
+        myservo9.attach(9); // 
+        myservo12.attach(12); // 
+        myservo11.attach(11);  //
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1); // 
+        myservo2.attach(2);
+        myservo3.attach(3);
+        
+        myservo2.write(130);
+        myservo8.write(90);  // 
+        myservo10.write(-20);  // 
+        myservo9.write(350);  // 
+        //myservo.write(80);  // 
+        //myservo.write(100); //
+        delay(100);
+        myservo7.write(105);  //  
+        myservo6.write(-30);  // 
+        delay(200);
+        myservo4.write(170); //
+        myservo5.write(25);  // 
+        delay(100);myservo3.attach(3);
+        myservoA0.write(190); // 
+        myservoA1.write(40); //
+        myservo12.write(20); // 
+        myservo11.write(75);  //
+        myservo3.write(140);
+        delay(250);
+        
+        myservo2.detach();
+        myservo8.detach(); // 
+        myservo10.detach(); // 
+        myservo9.detach(); // 
+        //myservo12.detach(); //
+        myservo11.detach();  // 
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();  // up down
+        myservoA0.detach(); // 
+        myservoA1.detach(); // 
+        myservo3.detach();
     }
+    if(pos=='X') {
+        // SOMETIMES I'M
+        //1) happy 2) sad 3) confused 4) mad 
+        myservo8.attach(8);   // jaw (20-110, open-to-c)
+        myservo10.attach(10); // 
+        myservo9.attach(9);   //
+        myservo12.attach(12); // 
+        myservo11.attach(11); //  
+        myservoA0.attach(A0); //  
+        myservoA1.attach(A1); //  
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  
+        myservo2.attach(2);
+        myservo3.attach(3);
+       
+        myservo8.write(100);   // 
+        myservo10.write(20);  // 
+        myservo9.write(350);   // 
+        myservo12.write(10);   //
+        myservo11.write(75);    // 
+        myservoA0.write(150);   //
+        myservoA1.write(15);  
+        myservo6.write(25); // 
+        myservo7.write(68);  // 
+        myservo4.write(130);
+        myservo5.write(60);
+        myservo2.write(150);
+        myservo3.write(130);
+      //end happy
+        delay(300);
+        
+        myservo8.detach();   //  
+        myservo10.detach();  // 
+        myservo9.detach();   // 
+        myservo12.detach();  //
+        myservo11.detach();  // 
+        myservoA0.detach();  //  
+        myservoA1.detach();  //  
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();
+        myservo2.detach();
+        myservo3.detach();
+        delay(100);
+        
+        myservo10.attach(10); // 
+        myservo9.attach(9);   // 
+        //myservo12.attach(12); // 
+        //myservo11.attach(11);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1);  // 
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  
+        myservo2.attach(2);
+        myservo3.attach(3);
+        
+        myservo2.write(130);
+        myservo6.write(25); // 
+        myservo7.write(68);  // 
+        myservo4.write(130);
+        myservo5.write(60);
+        myservo10.write(140);  // left lip down
+        myservo9.write(70);  // right lip down
+        myservoA0.write(150);
+        myservoA1.write(15);
+        myservo3.write(100);
+        delay(400);
+        
+        myservo2.detach();
+        myservo10.detach(); //
+        myservo9.detach(); //
+        myservoA0.detach(); // 
+        myservoA1.detach();  // 
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();  // up down
+        myservo3.detach();
+        //end sad
+        
+        delay (400);
+        
+         myservo8.attach(8); //
+        myservo10.attach(10); // 
+        myservo9.attach(9); // 
+        myservo12.attach(12); // 
+        myservo11.attach(11);  //
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1); // 
+        myservo2.attach(2);
+        myservo3.attach(3);
+        
+        myservo2.write(115);
+        myservo8.write(115);  // 
+        myservo10.write(-20);  // 
+        myservo9.write(70);  // 
+        delay(100);
+        myservo7.write(95);  //  
+        myservo6.write(52);  // 
+        delay(200);
+        myservo4.write(60); //
+        myservo5.write(90);  // 
+        delay(100);
+        myservoA0.write(170); // 
+        myservoA1.write(50); //
+        myservo12.write(20); // 
+        myservo11.write(75);  //
+        myservo3.write(100);
+        delay(150);
+        
+        myservo2.detach();
+        myservo8.detach(); // 
+        myservo10.detach(); // 
+        myservo9.detach(); // 
+        //myservo12.detach(); //
+        myservo11.detach();  // 
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();  // up down
+        myservoA0.detach(); // 
+        myservoA1.detach(); // 
+        myservo3.detach();
+        //end confused
+        delay(400);
+        myservo6.attach(6); // 
+        myservo7.attach(7);  // 
+        myservo4.attach(4); // 
+        myservo5.attach(5);  
+        myservo10.attach(10); // 
+        myservo9.attach(9);   // 
+        //myservo12.attach(12); // 
+        //myservo11.attach(11);  // 
+        myservoA0.attach(A0); // 
+        myservoA1.attach(A1);  
+        myservo2.attach(2);  // 
+        myservo8.attach(8);
+        myservo3.attach(3);
+        
+        myservo10.write(145);  // left lip down
+        myservo9.write(70);  // right lip down
+        myservo8.write(90);
+        //myservo12.write(110); // left eyebrow sad
+        //myservo11.write(80); // right eyebrow sad
+        myservoA0.write(100);
+        myservoA1.write(60);
+        myservo2.write(30);  
+        myservo6.write(25); // 
+        myservo7.write(67);  // 
+        myservo4.write(130);
+        myservo5.write(60);
+        myservo3.write(170);
+        delay(400);
+        
+        myservo10.detach(); //
+        myservo9.detach(); //
+        myservo8.detach();
+        //myservo12.detach(); // 
+        //myservo11.detach();  // 
+        myservoA0.detach(); // 
+        myservoA1.detach();  // 
+        myservo6.detach(); // left right
+        myservo7.detach();  // left right
+        myservo4.detach(); // up down
+        myservo5.detach();  // up down
+        myservo3.detach();
+        
+      }
+    
+    } 
   } 
 } 
 
