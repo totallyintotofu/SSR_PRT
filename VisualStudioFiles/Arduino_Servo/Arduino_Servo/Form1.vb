@@ -6,6 +6,7 @@ Imports System.Speech.Synthesis
 Imports System.IO
 Imports System.IO.Ports
 Imports System.Threading
+Imports System.Speech.Recognition
 
 Public Class Form1
 
@@ -19,6 +20,9 @@ Public Class Form1
     'Dim returnValue As Prompt
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        '#JC Init the Speech Recognition
+        InitSpeechRecoginition()
+
         SerialPort1.Close()
         SerialPort1.PortName = "COM6" 'define your port
         SerialPort1.BaudRate = 9600
@@ -34,6 +38,7 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+
 
 
     End Sub
@@ -1635,6 +1640,8 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        '#JC - Ask why to know why Fritz isn't feeling well
+        WhyResponse = AddressOf NotGreatCont_Click
     End Sub
 
     Private Sub NotGreatCont_Click(sender As Object, e As EventArgs) Handles NotGreatCont.Click
@@ -1695,6 +1702,8 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        '#JC Demo - Say Yes to hear a story.
+        YesResponse = AddressOf Story2_Click
     End Sub
     Private Sub Story2_Click(sender As Object, e As EventArgs) Handles Story2.Click
         Timer1.Enabled = False
@@ -1738,4 +1747,127 @@ Public Class Form1
         Timer3.Enabled = True
     End Sub
 
+
+#Region "Speech Recognition"
+    'I tried to group all the speech recognition code together but there were some places that I couldn't.
+    'Just look for '#JC
+    Private WithEvents recognizer As New SpeechRecognitionEngine()
+    Private AutomationResponses As New Dictionary(Of String, BtnPress)
+    Private Delegate Sub BtnPress(sender As Object, e As EventArgs)
+    Private YesResponse As BtnPress
+    Private NoResponse As BtnPress
+    Private WhyResponse As BtnPress
+    Private Speech As String
+
+    Sub InitSpeechRecoginition()
+
+        Dim keywords As New Choices()
+        keywords.Add("game")
+        keywords.Add("story")
+        keywords.Add("fritz")
+        keywords.Add("l e")
+        keywords.Add("hello")
+        keywords.Add("how are you")
+        keywords.Add("why")
+
+        ' Create a GrammarBuilder object and append the Choices object.
+        Dim gb As New GrammarBuilder()
+        gb.Append(keywords)
+
+        Dim g As New Grammar(gb)
+
+
+        Dim dictation As New DictationGrammar()
+
+        'Dictation Engine -- the part with all the magic in it
+        dictation.Name = "Dictation Grammar"
+        recognizer = New SpeechRecognitionEngine()
+        recognizer.LoadGrammar(g)
+        recognizer.LoadGrammar(dictation)
+
+
+        'Load the AutomationActions Before Starting to Listen
+        'These map potential phrases to actions. They could be improved however
+        'in order to follow a script, or not repeat questions, etc.
+        AutomationResponses.Add("tell me a story", AddressOf Story2_Click)
+        AutomationResponses.Add("story", AddressOf Story2_Click)
+        AutomationResponses.Add("yes", YesResponse)
+        AutomationResponses.Add("no", NoResponse)
+        AutomationResponses.Add("hello fritz", AddressOf Hello_Click)
+        AutomationResponses.Add("hello", AddressOf Hi_Click)
+        AutomationResponses.Add("how are you", AddressOf NotGreat_Click)
+        AutomationResponses.Add("how're you doing", AddressOf NotGreat_Click)
+        AutomationResponses.Add("what did you do this weekend", AddressOf Lego1_Click)
+        AutomationResponses.Add("why", WhyResponse)
+
+
+        recognizer.SetInputToDefaultAudioDevice()
+        recognizer.RecognizeAsync(RecognizeMode.Multiple)
+
+    End Sub
+
+    'This is called automatically whenever speech is successfully recognized.
+    Public Sub SpeechRecognized(sender As Object, e As SpeechRecognizedEventArgs) Handles recognizer.SpeechRecognized
+        Dim matchThreshhold As Double = 0.75
+        Dim currentMatchVal As Double = 0.0
+        Dim currentMatch As String
+
+        'This is a delegate for any action we may take.
+        Dim mydel As BtnPress
+
+        'This is what the Microsoft Speech heard
+        Dim heardtext As String = e.Result.Text.ToLower()
+        'Because we are in a different thread, we update a class variable which a timer sets the form to display (We should use a delegate here)
+        Speech = heardtext
+
+        'Check for common misconceptions
+        If (heardtext = "l e") Then heardtext = "Eli" 'l e is really close to Eli. We check for l e because Microsoft Speech thinks Eli should sounds like Ely
+        heardtext = heardtext.Replace("for its", "fritz") 'Another common misconception that I am course correcting.
+
+        'If we are accepting automatic actions, score the phrase against all our potential responses, find the best and implement the action.
+        If chkAutoAction.Checked Then
+            For Each p In AutomationResponses
+                If (Compare(p.Key, heardtext) > currentMatchVal) Then
+                    currentMatchVal = Compare(p.Key, e.Result.Text)
+                    If heardtext.Contains(p.Key) Then currentMatchVal = currentMatchVal + 1
+                    currentMatch = p.Key
+                End If
+            Next
+            If (currentMatchVal >= matchThreshhold) Then
+                AutomationResponses.TryGetValue(currentMatch, mydel)
+                If (Not mydel Is Nothing) Then
+                    mydel.Invoke(Nothing, Nothing)
+                End If
+            End If
+        End If
+    End Sub
+    'Form http://www.codeproject.com/Questions/147809/Compare-Strings-for-Percentage-Match
+    'This compares strings and scores them based off of how different they are. I would like to switch this to a word based
+    'system instead of a character based one.
+    Function Compare(ByVal str1 As String, ByVal str2 As String) As Double
+        Dim count As Integer = If(str1.Length > str2.Length, str1.Length, str2.Length)
+        Dim hits As Integer = 0
+        Dim i, j As Integer : i = 0 : j = 0
+        For i = 0 To str1.Length - 1
+            If str1.Chars(i) = " " Then i += 1 : j = str2.IndexOf(" "c, j) + 1 : hits += 1
+            While j < str2.Length AndAlso str2.Chars(j) <> " "c
+                If str1.Chars(i) = str2.Chars(j) Then
+                    hits += 1
+                    j += 1
+                    Exit While
+                Else
+                    j += 1
+                End If
+            End While
+            If Not (j < str2.Length AndAlso str2.Chars(j) <> " "c) Then
+                j -= 1
+            End If
+        Next
+        Return Math.Round((hits / count), 2)
+    End Function
+    'This timer updates our form with the latest speech if any.
+    Private Sub tmrSpeech_Tick(sender As Object, e As EventArgs) Handles tmrSpeech.Tick
+        lblSpeechHeard.Text = Speech
+    End Sub
+#End Region
 End Class

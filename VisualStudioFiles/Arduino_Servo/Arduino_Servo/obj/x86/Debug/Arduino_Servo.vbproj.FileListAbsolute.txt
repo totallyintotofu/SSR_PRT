@@ -103,3 +103,14 @@ C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_
 C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Form1.resources
 C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Resources.resources
 C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.GenerateResource.Cache
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.ResolveComReference.cache
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.exe
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.xml
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.pdb
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Elves.wav
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.exe
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.pdb
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Arduino_Servo.xml
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Form1.resources
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Resources.resources
+C:\Users\JC Snider\Desktop\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.GenerateResource.Cache

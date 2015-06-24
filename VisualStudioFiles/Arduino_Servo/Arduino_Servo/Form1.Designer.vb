@@ -145,6 +145,10 @@ Partial Class Form1
         Me.Script2 = New System.Windows.Forms.Button()
         Me.Script3 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.chkAutoAction = New System.Windows.Forms.CheckBox()
+        Me.lblSpeechHeard = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.tmrSpeech = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Button1
@@ -170,50 +174,46 @@ Partial Class Form1
         '
         'Story4
         '
-        Me.Story4.Location = New System.Drawing.Point(558, 484)
-        Me.Story4.Margin = New System.Windows.Forms.Padding(4)
+        Me.Story4.Location = New System.Drawing.Point(418, 393)
         Me.Story4.Name = "Story4"
-        Me.Story4.Size = New System.Drawing.Size(171, 28)
+        Me.Story4.Size = New System.Drawing.Size(128, 23)
         Me.Story4.TabIndex = 260
         Me.Story4.Text = "Tell me a story!"
         Me.Story4.UseVisualStyleBackColor = True
         '
         'Story3
         '
-        Me.Story3.Location = New System.Drawing.Point(558, 444)
-        Me.Story3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Story3.Location = New System.Drawing.Point(418, 361)
         Me.Story3.Name = "Story3"
-        Me.Story3.Size = New System.Drawing.Size(171, 28)
+        Me.Story3.Size = New System.Drawing.Size(128, 23)
         Me.Story3.TabIndex = 259
         Me.Story3.Text = "Isn't that cool?"
         Me.Story3.UseVisualStyleBackColor = True
         '
         'Story1
         '
-        Me.Story1.Location = New System.Drawing.Point(558, 370)
-        Me.Story1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Story1.Location = New System.Drawing.Point(418, 301)
         Me.Story1.Name = "Story1"
-        Me.Story1.Size = New System.Drawing.Size(171, 28)
+        Me.Story1.Size = New System.Drawing.Size(128, 23)
         Me.Story1.TabIndex = 258
         Me.Story1.Text = "Can I tell a story?"
         Me.Story1.UseVisualStyleBackColor = True
         '
         'Maybe
         '
-        Me.Maybe.Location = New System.Drawing.Point(1042, 146)
-        Me.Maybe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Maybe.Location = New System.Drawing.Point(782, 119)
+        Me.Maybe.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Maybe.Name = "Maybe"
-        Me.Maybe.Size = New System.Drawing.Size(124, 30)
+        Me.Maybe.Size = New System.Drawing.Size(93, 24)
         Me.Maybe.TabIndex = 257
         Me.Maybe.Text = "Maybe"
         Me.Maybe.UseVisualStyleBackColor = True
         '
         'Story2
         '
-        Me.Story2.Location = New System.Drawing.Point(558, 406)
-        Me.Story2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Story2.Location = New System.Drawing.Point(418, 330)
         Me.Story2.Name = "Story2"
-        Me.Story2.Size = New System.Drawing.Size(171, 28)
+        Me.Story2.Size = New System.Drawing.Size(128, 23)
         Me.Story2.TabIndex = 256
         Me.Story2.Text = "Story 1"
         Me.Story2.UseVisualStyleBackColor = True
@@ -222,29 +222,27 @@ Partial Class Form1
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(554, 342)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(416, 278)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 17)
+        Me.Label11.Size = New System.Drawing.Size(49, 13)
         Me.Label11.TabIndex = 255
         Me.Label11.Text = "STORY"
         '
         'Guess
         '
-        Me.Guess.Location = New System.Drawing.Point(1042, 221)
-        Me.Guess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guess.Location = New System.Drawing.Point(782, 180)
+        Me.Guess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Guess.Name = "Guess"
-        Me.Guess.Size = New System.Drawing.Size(124, 30)
+        Me.Guess.Size = New System.Drawing.Size(93, 24)
         Me.Guess.TabIndex = 254
         Me.Guess.Text = "I guess"
         Me.Guess.UseVisualStyleBackColor = True
         '
         'NotGreatCont
         '
-        Me.NotGreatCont.Location = New System.Drawing.Point(715, 285)
-        Me.NotGreatCont.Margin = New System.Windows.Forms.Padding(4)
+        Me.NotGreatCont.Location = New System.Drawing.Point(536, 232)
         Me.NotGreatCont.Name = "NotGreatCont"
-        Me.NotGreatCont.Size = New System.Drawing.Size(69, 30)
+        Me.NotGreatCont.Size = New System.Drawing.Size(52, 24)
         Me.NotGreatCont.TabIndex = 253
         Me.NotGreatCont.Text = "(cont'd)"
         Me.NotGreatCont.UseVisualStyleBackColor = True
@@ -252,40 +250,40 @@ Partial Class Form1
         'DelayClear
         '
         Me.DelayClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DelayClear.Location = New System.Drawing.Point(458, 598)
-        Me.DelayClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DelayClear.Location = New System.Drawing.Point(344, 486)
+        Me.DelayClear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DelayClear.Name = "DelayClear"
-        Me.DelayClear.Size = New System.Drawing.Size(68, 28)
+        Me.DelayClear.Size = New System.Drawing.Size(51, 23)
         Me.DelayClear.TabIndex = 252
         Me.DelayClear.Text = "Clear"
         Me.DelayClear.UseVisualStyleBackColor = False
         '
         'NotGreat
         '
-        Me.NotGreat.Location = New System.Drawing.Point(620, 285)
-        Me.NotGreat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.NotGreat.Location = New System.Drawing.Point(465, 232)
+        Me.NotGreat.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NotGreat.Name = "NotGreat"
-        Me.NotGreat.Size = New System.Drawing.Size(88, 30)
+        Me.NotGreat.Size = New System.Drawing.Size(66, 24)
         Me.NotGreat.TabIndex = 251
         Me.NotGreat.Text = "Not great"
         Me.NotGreat.UseVisualStyleBackColor = True
         '
         'ImOkay
         '
-        Me.ImOkay.Location = New System.Drawing.Point(620, 248)
-        Me.ImOkay.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ImOkay.Location = New System.Drawing.Point(465, 202)
+        Me.ImOkay.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ImOkay.Name = "ImOkay"
-        Me.ImOkay.Size = New System.Drawing.Size(164, 30)
+        Me.ImOkay.Size = New System.Drawing.Size(123, 24)
         Me.ImOkay.TabIndex = 250
         Me.ImOkay.Text = "I'm okay"
         Me.ImOkay.UseVisualStyleBackColor = True
         '
         'ImGood
         '
-        Me.ImGood.Location = New System.Drawing.Point(620, 212)
-        Me.ImGood.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ImGood.Location = New System.Drawing.Point(465, 172)
+        Me.ImGood.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ImGood.Name = "ImGood"
-        Me.ImGood.Size = New System.Drawing.Size(164, 30)
+        Me.ImGood.Size = New System.Drawing.Size(123, 24)
         Me.ImGood.TabIndex = 249
         Me.ImGood.Text = "I'm good"
         Me.ImGood.UseVisualStyleBackColor = True
@@ -295,136 +293,127 @@ Partial Class Form1
         Me.MoveDrop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.MoveDrop.FormattingEnabled = True
         Me.MoveDrop.Items.AddRange(New Object() {"eyes", "mouth", "faces"})
-        Me.MoveDrop.Location = New System.Drawing.Point(698, 178)
-        Me.MoveDrop.Margin = New System.Windows.Forms.Padding(4)
+        Me.MoveDrop.Location = New System.Drawing.Point(524, 145)
         Me.MoveDrop.Name = "MoveDrop"
-        Me.MoveDrop.Size = New System.Drawing.Size(85, 24)
+        Me.MoveDrop.Size = New System.Drawing.Size(65, 21)
         Me.MoveDrop.TabIndex = 248
         '
         'DelayBox
         '
-        Me.DelayBox.Location = New System.Drawing.Point(139, 601)
-        Me.DelayBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DelayBox.Location = New System.Drawing.Point(104, 488)
+        Me.DelayBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DelayBox.Name = "DelayBox"
-        Me.DelayBox.Size = New System.Drawing.Size(313, 22)
+        Me.DelayBox.Size = New System.Drawing.Size(236, 20)
         Me.DelayBox.TabIndex = 247
         '
         'Cookies2
         '
-        Me.Cookies2.Location = New System.Drawing.Point(219, 444)
-        Me.Cookies2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Cookies2.Location = New System.Drawing.Point(164, 361)
         Me.Cookies2.Name = "Cookies2"
-        Me.Cookies2.Size = New System.Drawing.Size(69, 28)
+        Me.Cookies2.Size = New System.Drawing.Size(52, 23)
         Me.Cookies2.TabIndex = 246
         Me.Cookies2.Text = "(cont'd)"
         Me.Cookies2.UseVisualStyleBackColor = True
         '
         'Friend2
         '
-        Me.Friend2.Location = New System.Drawing.Point(219, 480)
-        Me.Friend2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Friend2.Location = New System.Drawing.Point(164, 390)
         Me.Friend2.Name = "Friend2"
-        Me.Friend2.Size = New System.Drawing.Size(69, 28)
+        Me.Friend2.Size = New System.Drawing.Size(52, 23)
         Me.Friend2.TabIndex = 245
         Me.Friend2.Text = "(cont'd)"
         Me.Friend2.UseVisualStyleBackColor = True
         '
         'History2
         '
-        Me.History2.Location = New System.Drawing.Point(219, 406)
-        Me.History2.Margin = New System.Windows.Forms.Padding(4)
+        Me.History2.Location = New System.Drawing.Point(164, 330)
         Me.History2.Name = "History2"
-        Me.History2.Size = New System.Drawing.Size(69, 28)
+        Me.History2.Size = New System.Drawing.Size(52, 23)
         Me.History2.TabIndex = 244
         Me.History2.Text = "(cont'd)"
         Me.History2.UseVisualStyleBackColor = True
         '
         'Recess2
         '
-        Me.Recess2.Location = New System.Drawing.Point(219, 370)
-        Me.Recess2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Recess2.Location = New System.Drawing.Point(164, 301)
         Me.Recess2.Name = "Recess2"
-        Me.Recess2.Size = New System.Drawing.Size(69, 28)
+        Me.Recess2.Size = New System.Drawing.Size(52, 23)
         Me.Recess2.TabIndex = 243
         Me.Recess2.Text = "(cont'd)"
         Me.Recess2.UseVisualStyleBackColor = True
         '
         'Lego3
         '
-        Me.Lego3.Location = New System.Drawing.Point(968, 448)
-        Me.Lego3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Lego3.Location = New System.Drawing.Point(726, 364)
         Me.Lego3.Name = "Lego3"
-        Me.Lego3.Size = New System.Drawing.Size(69, 28)
+        Me.Lego3.Size = New System.Drawing.Size(52, 23)
         Me.Lego3.TabIndex = 242
         Me.Lego3.Text = "(cont'd)"
         Me.Lego3.UseVisualStyleBackColor = True
         '
         'Game3
         '
-        Me.Game3.Location = New System.Drawing.Point(968, 486)
-        Me.Game3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Game3.Location = New System.Drawing.Point(726, 395)
         Me.Game3.Name = "Game3"
-        Me.Game3.Size = New System.Drawing.Size(69, 28)
+        Me.Game3.Size = New System.Drawing.Size(52, 23)
         Me.Game3.TabIndex = 241
         Me.Game3.Text = "(cont'd)"
         Me.Game3.UseVisualStyleBackColor = True
         '
         'Party3
         '
-        Me.Party3.Location = New System.Drawing.Point(968, 412)
-        Me.Party3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Party3.Location = New System.Drawing.Point(726, 335)
         Me.Party3.Name = "Party3"
-        Me.Party3.Size = New System.Drawing.Size(69, 28)
+        Me.Party3.Size = New System.Drawing.Size(52, 23)
         Me.Party3.TabIndex = 240
         Me.Party3.Text = "(cont'd)"
         Me.Party3.UseVisualStyleBackColor = True
         '
         'Beach3
         '
-        Me.Beach3.Location = New System.Drawing.Point(968, 374)
-        Me.Beach3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Beach3.Location = New System.Drawing.Point(726, 304)
         Me.Beach3.Name = "Beach3"
-        Me.Beach3.Size = New System.Drawing.Size(69, 28)
+        Me.Beach3.Size = New System.Drawing.Size(52, 23)
         Me.Beach3.TabIndex = 239
         Me.Beach3.Text = "(cont'd)"
         Me.Beach3.UseVisualStyleBackColor = True
         '
         'Exclaim4
         '
-        Me.Exclaim4.Location = New System.Drawing.Point(1198, 222)
-        Me.Exclaim4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Exclaim4.Location = New System.Drawing.Point(898, 180)
+        Me.Exclaim4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Exclaim4.Name = "Exclaim4"
-        Me.Exclaim4.Size = New System.Drawing.Size(132, 30)
+        Me.Exclaim4.Size = New System.Drawing.Size(99, 24)
         Me.Exclaim4.TabIndex = 238
         Me.Exclaim4.Text = "You're awesome!"
         Me.Exclaim4.UseVisualStyleBackColor = True
         '
         'Exclaim3
         '
-        Me.Exclaim3.Location = New System.Drawing.Point(1198, 187)
-        Me.Exclaim3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Exclaim3.Location = New System.Drawing.Point(898, 152)
+        Me.Exclaim3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Exclaim3.Name = "Exclaim3"
-        Me.Exclaim3.Size = New System.Drawing.Size(132, 30)
+        Me.Exclaim3.Size = New System.Drawing.Size(99, 24)
         Me.Exclaim3.TabIndex = 237
         Me.Exclaim3.Text = "That's great!"
         Me.Exclaim3.UseVisualStyleBackColor = True
         '
         'Exclaim2
         '
-        Me.Exclaim2.Location = New System.Drawing.Point(1198, 147)
-        Me.Exclaim2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Exclaim2.Location = New System.Drawing.Point(898, 119)
+        Me.Exclaim2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Exclaim2.Name = "Exclaim2"
-        Me.Exclaim2.Size = New System.Drawing.Size(132, 30)
+        Me.Exclaim2.Size = New System.Drawing.Size(99, 24)
         Me.Exclaim2.TabIndex = 236
         Me.Exclaim2.Text = "Wow!"
         Me.Exclaim2.UseVisualStyleBackColor = True
         '
         'Exclaim1
         '
-        Me.Exclaim1.Location = New System.Drawing.Point(1198, 109)
-        Me.Exclaim1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Exclaim1.Location = New System.Drawing.Point(898, 89)
+        Me.Exclaim1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Exclaim1.Name = "Exclaim1"
-        Me.Exclaim1.Size = New System.Drawing.Size(132, 30)
+        Me.Exclaim1.Size = New System.Drawing.Size(99, 24)
         Me.Exclaim1.TabIndex = 235
         Me.Exclaim1.Text = "How cool!"
         Me.Exclaim1.UseVisualStyleBackColor = True
@@ -433,39 +422,38 @@ Partial Class Form1
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(1194, 81)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Location = New System.Drawing.Point(896, 66)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(126, 17)
+        Me.Label18.Size = New System.Drawing.Size(102, 13)
         Me.Label18.TabIndex = 234
         Me.Label18.Text = "EXCLAMATIONS"
         '
         'HBU
         '
-        Me.HBU.Location = New System.Drawing.Point(1042, 294)
-        Me.HBU.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.HBU.Location = New System.Drawing.Point(782, 239)
+        Me.HBU.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HBU.Name = "HBU"
-        Me.HBU.Size = New System.Drawing.Size(124, 30)
+        Me.HBU.Size = New System.Drawing.Size(93, 24)
         Me.HBU.TabIndex = 233
         Me.HBU.Text = "How about you?"
         Me.HBU.UseVisualStyleBackColor = True
         '
         'Sorry
         '
-        Me.Sorry.Location = New System.Drawing.Point(1042, 258)
-        Me.Sorry.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Sorry.Location = New System.Drawing.Point(782, 210)
+        Me.Sorry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Sorry.Name = "Sorry"
-        Me.Sorry.Size = New System.Drawing.Size(124, 30)
+        Me.Sorry.Size = New System.Drawing.Size(93, 24)
         Me.Sorry.TabIndex = 232
         Me.Sorry.Text = "Sorry"
         Me.Sorry.UseVisualStyleBackColor = True
         '
         'DontKnow
         '
-        Me.DontKnow.Location = New System.Drawing.Point(1042, 183)
-        Me.DontKnow.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DontKnow.Location = New System.Drawing.Point(782, 149)
+        Me.DontKnow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DontKnow.Name = "DontKnow"
-        Me.DontKnow.Size = New System.Drawing.Size(124, 30)
+        Me.DontKnow.Size = New System.Drawing.Size(93, 24)
         Me.DontKnow.TabIndex = 231
         Me.DontKnow.Text = "I don't know"
         Me.DontKnow.UseVisualStyleBackColor = True
@@ -474,109 +462,100 @@ Partial Class Form1
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(1038, 81)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label17.Location = New System.Drawing.Point(778, 66)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(102, 17)
+        Me.Label17.Size = New System.Drawing.Size(82, 13)
         Me.Label17.TabIndex = 230
         Me.Label17.Text = "RESPONSES"
         '
         'Yes
         '
-        Me.Yes.Location = New System.Drawing.Point(1042, 109)
-        Me.Yes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Yes.Location = New System.Drawing.Point(782, 89)
+        Me.Yes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Yes.Name = "Yes"
-        Me.Yes.Size = New System.Drawing.Size(55, 30)
+        Me.Yes.Size = New System.Drawing.Size(41, 24)
         Me.Yes.TabIndex = 229
         Me.Yes.Text = "Yes"
         Me.Yes.UseVisualStyleBackColor = True
         '
         'No
         '
-        Me.No.Location = New System.Drawing.Point(1115, 109)
-        Me.No.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.No.Location = New System.Drawing.Point(836, 89)
+        Me.No.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.No.Name = "No"
-        Me.No.Size = New System.Drawing.Size(51, 30)
+        Me.No.Size = New System.Drawing.Size(38, 24)
         Me.No.TabIndex = 228
         Me.No.Text = "No"
         Me.No.UseVisualStyleBackColor = True
         '
         'Lego2
         '
-        Me.Lego2.Location = New System.Drawing.Point(891, 448)
-        Me.Lego2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Lego2.Location = New System.Drawing.Point(668, 364)
         Me.Lego2.Name = "Lego2"
-        Me.Lego2.Size = New System.Drawing.Size(69, 28)
+        Me.Lego2.Size = New System.Drawing.Size(52, 23)
         Me.Lego2.TabIndex = 227
         Me.Lego2.Text = "(cont'd)"
         Me.Lego2.UseVisualStyleBackColor = True
         '
         'Lego1
         '
-        Me.Lego1.Location = New System.Drawing.Point(767, 448)
-        Me.Lego1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Lego1.Location = New System.Drawing.Point(575, 364)
         Me.Lego1.Name = "Lego1"
-        Me.Lego1.Size = New System.Drawing.Size(115, 28)
+        Me.Lego1.Size = New System.Drawing.Size(86, 23)
         Me.Lego1.TabIndex = 226
         Me.Lego1.Text = "Lego"
         Me.Lego1.UseVisualStyleBackColor = True
         '
         'Game2
         '
-        Me.Game2.Location = New System.Drawing.Point(891, 486)
-        Me.Game2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Game2.Location = New System.Drawing.Point(668, 395)
         Me.Game2.Name = "Game2"
-        Me.Game2.Size = New System.Drawing.Size(69, 28)
+        Me.Game2.Size = New System.Drawing.Size(52, 23)
         Me.Game2.TabIndex = 225
         Me.Game2.Text = "(cont'd)"
         Me.Game2.UseVisualStyleBackColor = True
         '
         'Party2
         '
-        Me.Party2.Location = New System.Drawing.Point(891, 412)
-        Me.Party2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Party2.Location = New System.Drawing.Point(668, 335)
         Me.Party2.Name = "Party2"
-        Me.Party2.Size = New System.Drawing.Size(69, 28)
+        Me.Party2.Size = New System.Drawing.Size(52, 23)
         Me.Party2.TabIndex = 224
         Me.Party2.Text = "(cont'd)"
         Me.Party2.UseVisualStyleBackColor = True
         '
         'Beach2
         '
-        Me.Beach2.Location = New System.Drawing.Point(891, 374)
-        Me.Beach2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Beach2.Location = New System.Drawing.Point(668, 304)
         Me.Beach2.Name = "Beach2"
-        Me.Beach2.Size = New System.Drawing.Size(69, 28)
+        Me.Beach2.Size = New System.Drawing.Size(52, 23)
         Me.Beach2.TabIndex = 223
         Me.Beach2.Text = "(cont'd)"
         Me.Beach2.UseVisualStyleBackColor = True
         '
         'Game1
         '
-        Me.Game1.Location = New System.Drawing.Point(767, 486)
-        Me.Game1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Game1.Location = New System.Drawing.Point(575, 395)
         Me.Game1.Name = "Game1"
-        Me.Game1.Size = New System.Drawing.Size(115, 28)
+        Me.Game1.Size = New System.Drawing.Size(86, 23)
         Me.Game1.TabIndex = 222
         Me.Game1.Text = "Video games"
         Me.Game1.UseVisualStyleBackColor = True
         '
         'Party1
         '
-        Me.Party1.Location = New System.Drawing.Point(767, 412)
-        Me.Party1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Party1.Location = New System.Drawing.Point(575, 335)
         Me.Party1.Name = "Party1"
-        Me.Party1.Size = New System.Drawing.Size(115, 28)
+        Me.Party1.Size = New System.Drawing.Size(86, 23)
         Me.Party1.TabIndex = 221
         Me.Party1.Text = "Birthday party"
         Me.Party1.UseVisualStyleBackColor = True
         '
         'Beach1
         '
-        Me.Beach1.Location = New System.Drawing.Point(767, 374)
-        Me.Beach1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Beach1.Location = New System.Drawing.Point(575, 304)
         Me.Beach1.Name = "Beach1"
-        Me.Beach1.Size = New System.Drawing.Size(115, 28)
+        Me.Beach1.Size = New System.Drawing.Size(86, 23)
         Me.Beach1.TabIndex = 220
         Me.Beach1.Text = "Beach"
         Me.Beach1.UseVisualStyleBackColor = True
@@ -585,10 +564,9 @@ Partial Class Form1
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(763, 342)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Location = New System.Drawing.Point(572, 278)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(84, 17)
+        Me.Label14.Size = New System.Drawing.Size(69, 13)
         Me.Label14.TabIndex = 219
         Me.Label14.Text = "WEEKEND"
         '
@@ -596,10 +574,9 @@ Partial Class Form1
         '
         Me.ICANDO.AutoSize = True
         Me.ICANDO.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ICANDO.Location = New System.Drawing.Point(616, 183)
-        Me.ICANDO.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.ICANDO.Location = New System.Drawing.Point(462, 149)
         Me.ICANDO.Name = "ICANDO"
-        Me.ICANDO.Size = New System.Drawing.Size(76, 17)
+        Me.ICANDO.Size = New System.Drawing.Size(62, 13)
         Me.ICANDO.TabIndex = 218
         Me.ICANDO.Text = "I CAN DO"
         '
@@ -607,49 +584,44 @@ Partial Class Form1
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(72, 648)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(54, 527)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(114, 17)
+        Me.Label13.Size = New System.Drawing.Size(92, 13)
         Me.Label13.TabIndex = 217
         Me.Label13.Text = "FREE SPEECH"
         '
         'Friend1
         '
-        Me.Friend1.Location = New System.Drawing.Point(76, 480)
-        Me.Friend1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Friend1.Location = New System.Drawing.Point(57, 390)
         Me.Friend1.Name = "Friend1"
-        Me.Friend1.Size = New System.Drawing.Size(135, 28)
+        Me.Friend1.Size = New System.Drawing.Size(101, 23)
         Me.Friend1.TabIndex = 216
         Me.Friend1.Text = "My friend Jimmy"
         Me.Friend1.UseVisualStyleBackColor = True
         '
         'Cookies1
         '
-        Me.Cookies1.Location = New System.Drawing.Point(76, 444)
-        Me.Cookies1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Cookies1.Location = New System.Drawing.Point(57, 361)
         Me.Cookies1.Name = "Cookies1"
-        Me.Cookies1.Size = New System.Drawing.Size(135, 28)
+        Me.Cookies1.Size = New System.Drawing.Size(101, 23)
         Me.Cookies1.TabIndex = 215
         Me.Cookies1.Text = "I like cookies"
         Me.Cookies1.UseVisualStyleBackColor = True
         '
         'History1
         '
-        Me.History1.Location = New System.Drawing.Point(76, 406)
-        Me.History1.Margin = New System.Windows.Forms.Padding(4)
+        Me.History1.Location = New System.Drawing.Point(57, 330)
         Me.History1.Name = "History1"
-        Me.History1.Size = New System.Drawing.Size(135, 28)
+        Me.History1.Size = New System.Drawing.Size(101, 23)
         Me.History1.TabIndex = 214
         Me.History1.Text = "History is boring"
         Me.History1.UseVisualStyleBackColor = True
         '
         'Recess1
         '
-        Me.Recess1.Location = New System.Drawing.Point(76, 370)
-        Me.Recess1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Recess1.Location = New System.Drawing.Point(57, 301)
         Me.Recess1.Name = "Recess1"
-        Me.Recess1.Size = New System.Drawing.Size(135, 28)
+        Me.Recess1.Size = New System.Drawing.Size(101, 23)
         Me.Recess1.TabIndex = 213
         Me.Recess1.Text = "I love recess"
         Me.Recess1.UseVisualStyleBackColor = True
@@ -658,19 +630,18 @@ Partial Class Form1
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(72, 342)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(54, 278)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(124, 17)
+        Me.Label12.Size = New System.Drawing.Size(100, 13)
         Me.Label12.TabIndex = 212
         Me.Label12.Text = "CONVO REPAIR"
         '
         'FaveCont
         '
-        Me.FaveCont.Location = New System.Drawing.Point(1275, 440)
-        Me.FaveCont.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FaveCont.Location = New System.Drawing.Point(956, 358)
+        Me.FaveCont.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FaveCont.Name = "FaveCont"
-        Me.FaveCont.Size = New System.Drawing.Size(67, 25)
+        Me.FaveCont.Size = New System.Drawing.Size(50, 20)
         Me.FaveCont.TabIndex = 211
         Me.FaveCont.Text = "(cont'd)"
         Me.FaveCont.UseVisualStyleBackColor = True
@@ -682,19 +653,17 @@ Partial Class Form1
         Me.Fave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Fave.FormattingEnabled = True
         Me.Fave.Items.AddRange(New Object() {"animal", "book", "color", "flavor", "food", "game", "movie", "TV show"})
-        Me.Fave.Location = New System.Drawing.Point(1154, 441)
-        Me.Fave.Margin = New System.Windows.Forms.Padding(4)
+        Me.Fave.Location = New System.Drawing.Point(866, 358)
         Me.Fave.Name = "Fave"
-        Me.Fave.Size = New System.Drawing.Size(111, 24)
+        Me.Fave.Size = New System.Drawing.Size(84, 21)
         Me.Fave.TabIndex = 210
         '
         'FaveLabel1
         '
         Me.FaveLabel1.AutoSize = True
-        Me.FaveLabel1.Location = New System.Drawing.Point(1074, 445)
-        Me.FaveLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.FaveLabel1.Location = New System.Drawing.Point(806, 362)
         Me.FaveLabel1.Name = "FaveLabel1"
-        Me.FaveLabel1.Size = New System.Drawing.Size(77, 17)
+        Me.FaveLabel1.Size = New System.Drawing.Size(59, 13)
         Me.FaveLabel1.TabIndex = 209
         Me.FaveLabel1.Text = "My favorite"
         '
@@ -702,87 +671,84 @@ Partial Class Form1
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1074, 342)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(806, 278)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(137, 17)
+        Me.Label10.Size = New System.Drawing.Size(109, 13)
         Me.Label10.TabIndex = 208
         Me.Label10.Text = "COMMON CONVO"
         '
         'DontLikeClear
         '
         Me.DontLikeClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DontLikeClear.Location = New System.Drawing.Point(1275, 408)
-        Me.DontLikeClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DontLikeClear.Location = New System.Drawing.Point(956, 332)
+        Me.DontLikeClear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DontLikeClear.Name = "DontLikeClear"
-        Me.DontLikeClear.Size = New System.Drawing.Size(67, 25)
+        Me.DontLikeClear.Size = New System.Drawing.Size(50, 20)
         Me.DontLikeClear.TabIndex = 207
         Me.DontLikeClear.Text = "Clear"
         Me.DontLikeClear.UseVisualStyleBackColor = False
         '
         'DontLikeBox
         '
-        Me.DontLikeBox.Location = New System.Drawing.Point(1154, 408)
-        Me.DontLikeBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DontLikeBox.Location = New System.Drawing.Point(866, 332)
+        Me.DontLikeBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DontLikeBox.Name = "DontLikeBox"
-        Me.DontLikeBox.Size = New System.Drawing.Size(111, 22)
+        Me.DontLikeBox.Size = New System.Drawing.Size(84, 20)
         Me.DontLikeBox.TabIndex = 206
         '
         'DontLikeLabel
         '
         Me.DontLikeLabel.AutoSize = True
-        Me.DontLikeLabel.Location = New System.Drawing.Point(1074, 413)
-        Me.DontLikeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DontLikeLabel.Location = New System.Drawing.Point(806, 336)
         Me.DontLikeLabel.Name = "DontLikeLabel"
-        Me.DontLikeLabel.Size = New System.Drawing.Size(71, 17)
+        Me.DontLikeLabel.Size = New System.Drawing.Size(55, 13)
         Me.DontLikeLabel.TabIndex = 205
         Me.DontLikeLabel.Text = "I don't like"
         '
         'LikeClear
         '
         Me.LikeClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LikeClear.Location = New System.Drawing.Point(1275, 375)
-        Me.LikeClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.LikeClear.Location = New System.Drawing.Point(956, 305)
+        Me.LikeClear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.LikeClear.Name = "LikeClear"
-        Me.LikeClear.Size = New System.Drawing.Size(67, 25)
+        Me.LikeClear.Size = New System.Drawing.Size(50, 20)
         Me.LikeClear.TabIndex = 204
         Me.LikeClear.Text = "Clear"
         Me.LikeClear.UseVisualStyleBackColor = False
         '
         'LikeBox
         '
-        Me.LikeBox.Location = New System.Drawing.Point(1154, 375)
-        Me.LikeBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.LikeBox.Location = New System.Drawing.Point(866, 305)
+        Me.LikeBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.LikeBox.Name = "LikeBox"
-        Me.LikeBox.Size = New System.Drawing.Size(111, 22)
+        Me.LikeBox.Size = New System.Drawing.Size(84, 20)
         Me.LikeBox.TabIndex = 203
         '
         'LikeLabel
         '
         Me.LikeLabel.AutoSize = True
-        Me.LikeLabel.Location = New System.Drawing.Point(1108, 377)
-        Me.LikeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LikeLabel.Location = New System.Drawing.Point(831, 306)
         Me.LikeLabel.Name = "LikeLabel"
-        Me.LikeLabel.Size = New System.Drawing.Size(36, 17)
+        Me.LikeLabel.Size = New System.Drawing.Size(29, 13)
         Me.LikeLabel.TabIndex = 202
         Me.LikeLabel.Text = "I like"
         '
         'Interrupt2
         '
-        Me.Interrupt2.Location = New System.Drawing.Point(283, 557)
-        Me.Interrupt2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Interrupt2.Location = New System.Drawing.Point(212, 453)
+        Me.Interrupt2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Interrupt2.Name = "Interrupt2"
-        Me.Interrupt2.Size = New System.Drawing.Size(181, 30)
+        Me.Interrupt2.Size = New System.Drawing.Size(136, 24)
         Me.Interrupt2.TabIndex = 201
         Me.Interrupt2.Text = "Interruption 2"
         Me.Interrupt2.UseVisualStyleBackColor = True
         '
         'Interrupt1
         '
-        Me.Interrupt1.Location = New System.Drawing.Point(76, 557)
-        Me.Interrupt1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Interrupt1.Location = New System.Drawing.Point(57, 453)
+        Me.Interrupt1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Interrupt1.Name = "Interrupt1"
-        Me.Interrupt1.Size = New System.Drawing.Size(181, 30)
+        Me.Interrupt1.Size = New System.Drawing.Size(136, 24)
         Me.Interrupt1.TabIndex = 200
         Me.Interrupt1.Text = "Interruption 1"
         Me.Interrupt1.UseVisualStyleBackColor = True
@@ -791,49 +757,48 @@ Partial Class Form1
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(72, 530)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(54, 431)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(150, 17)
+        Me.Label9.Size = New System.Drawing.Size(122, 13)
         Me.Label9.TabIndex = 199
         Me.Label9.Text = "RESPONSE TIMING"
         '
         'Staller4
         '
-        Me.Staller4.Location = New System.Drawing.Point(822, 220)
-        Me.Staller4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Staller4.Location = New System.Drawing.Point(616, 179)
+        Me.Staller4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Staller4.Name = "Staller4"
-        Me.Staller4.Size = New System.Drawing.Size(181, 30)
+        Me.Staller4.Size = New System.Drawing.Size(136, 24)
         Me.Staller4.TabIndex = 198
         Me.Staller4.Text = "Can you say that again?"
         Me.Staller4.UseVisualStyleBackColor = True
         '
         'Staller3
         '
-        Me.Staller3.Location = New System.Drawing.Point(822, 185)
-        Me.Staller3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Staller3.Location = New System.Drawing.Point(616, 150)
+        Me.Staller3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Staller3.Name = "Staller3"
-        Me.Staller3.Size = New System.Drawing.Size(181, 30)
+        Me.Staller3.Size = New System.Drawing.Size(136, 24)
         Me.Staller3.TabIndex = 197
         Me.Staller3.Text = "Well..."
         Me.Staller3.UseVisualStyleBackColor = True
         '
         'Staller2
         '
-        Me.Staller2.Location = New System.Drawing.Point(822, 150)
-        Me.Staller2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Staller2.Location = New System.Drawing.Point(616, 122)
+        Me.Staller2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Staller2.Name = "Staller2"
-        Me.Staller2.Size = New System.Drawing.Size(181, 30)
+        Me.Staller2.Size = New System.Drawing.Size(136, 24)
         Me.Staller2.TabIndex = 196
         Me.Staller2.Text = "Let me think"
         Me.Staller2.UseVisualStyleBackColor = True
         '
         'Staller1
         '
-        Me.Staller1.Location = New System.Drawing.Point(822, 114)
-        Me.Staller1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Staller1.Location = New System.Drawing.Point(616, 93)
+        Me.Staller1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Staller1.Name = "Staller1"
-        Me.Staller1.Size = New System.Drawing.Size(181, 30)
+        Me.Staller1.Size = New System.Drawing.Size(136, 24)
         Me.Staller1.TabIndex = 195
         Me.Staller1.Text = "That's a good question!"
         Me.Staller1.UseVisualStyleBackColor = True
@@ -842,10 +807,9 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(818, 81)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(614, 66)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(87, 17)
+        Me.Label8.Size = New System.Drawing.Size(70, 13)
         Me.Label8.TabIndex = 194
         Me.Label8.Text = "STALLERS"
         '
@@ -853,10 +817,9 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1108, 530)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(838, 462)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(159, 17)
+        Me.Label7.Size = New System.Drawing.Size(127, 13)
         Me.Label7.TabIndex = 193
         Me.Label7.Text = "SPEECH CONTROLS"
         '
@@ -865,10 +828,10 @@ Partial Class Form1
         Me.ResumeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ResumeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResumeButton.ForeColor = System.Drawing.Color.White
-        Me.ResumeButton.Location = New System.Drawing.Point(1204, 563)
+        Me.ResumeButton.Location = New System.Drawing.Point(910, 488)
         Me.ResumeButton.Margin = New System.Windows.Forms.Padding(0)
         Me.ResumeButton.Name = "ResumeButton"
-        Me.ResumeButton.Size = New System.Drawing.Size(125, 49)
+        Me.ResumeButton.Size = New System.Drawing.Size(94, 40)
         Me.ResumeButton.TabIndex = 192
         Me.ResumeButton.Text = "RESUME"
         Me.ResumeButton.UseVisualStyleBackColor = False
@@ -878,20 +841,20 @@ Partial Class Form1
         Me.Pause.BackColor = System.Drawing.Color.Gold
         Me.Pause.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pause.ForeColor = System.Drawing.Color.White
-        Me.Pause.Location = New System.Drawing.Point(1070, 563)
+        Me.Pause.Location = New System.Drawing.Point(809, 488)
         Me.Pause.Margin = New System.Windows.Forms.Padding(0)
         Me.Pause.Name = "Pause"
-        Me.Pause.Size = New System.Drawing.Size(117, 49)
+        Me.Pause.Size = New System.Drawing.Size(88, 40)
         Me.Pause.TabIndex = 191
         Me.Pause.Text = "PAUSE"
         Me.Pause.UseVisualStyleBackColor = False
         '
         'Animated
         '
-        Me.Animated.Location = New System.Drawing.Point(351, 285)
-        Me.Animated.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Animated.Location = New System.Drawing.Point(263, 232)
+        Me.Animated.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Animated.Name = "Animated"
-        Me.Animated.Size = New System.Drawing.Size(103, 30)
+        Me.Animated.Size = New System.Drawing.Size(77, 24)
         Me.Animated.TabIndex = 190
         Me.Animated.Text = "Animated"
         Me.Animated.UseVisualStyleBackColor = True
@@ -900,29 +863,28 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(347, 260)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(260, 211)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(116, 17)
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
         Me.Label6.TabIndex = 189
         Me.Label6.Text = "EXPRESSIONS"
         '
         'Hi
         '
-        Me.Hi.Location = New System.Drawing.Point(620, 141)
-        Me.Hi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Hi.Location = New System.Drawing.Point(465, 115)
+        Me.Hi.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Hi.Name = "Hi"
-        Me.Hi.Size = New System.Drawing.Size(164, 30)
+        Me.Hi.Size = New System.Drawing.Size(123, 24)
         Me.Hi.TabIndex = 188
         Me.Hi.Text = "Hi, my name is Fritz"
         Me.Hi.UseVisualStyleBackColor = True
         '
         'Hello
         '
-        Me.Hello.Location = New System.Drawing.Point(620, 105)
-        Me.Hello.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Hello.Location = New System.Drawing.Point(465, 85)
+        Me.Hello.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Hello.Name = "Hello"
-        Me.Hello.Size = New System.Drawing.Size(164, 30)
+        Me.Hello.Size = New System.Drawing.Size(123, 24)
         Me.Hello.TabIndex = 187
         Me.Hello.Text = "Hello"
         Me.Hello.UseVisualStyleBackColor = True
@@ -931,39 +893,38 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(616, 81)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(462, 66)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 17)
+        Me.Label5.Size = New System.Drawing.Size(82, 13)
         Me.Label5.TabIndex = 186
         Me.Label5.Text = "SMALL TALK"
         '
         'Uhuh
         '
-        Me.Uhuh.Location = New System.Drawing.Point(434, 444)
-        Me.Uhuh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Uhuh.Location = New System.Drawing.Point(326, 361)
+        Me.Uhuh.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Uhuh.Name = "Uhuh"
-        Me.Uhuh.Size = New System.Drawing.Size(83, 30)
+        Me.Uhuh.Size = New System.Drawing.Size(62, 24)
         Me.Uhuh.TabIndex = 185
         Me.Uhuh.Text = "Uh huh"
         Me.Uhuh.UseVisualStyleBackColor = True
         '
         'Yeah
         '
-        Me.Yeah.Location = New System.Drawing.Point(434, 478)
-        Me.Yeah.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Yeah.Location = New System.Drawing.Point(326, 388)
+        Me.Yeah.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Yeah.Name = "Yeah"
-        Me.Yeah.Size = New System.Drawing.Size(83, 30)
+        Me.Yeah.Size = New System.Drawing.Size(62, 24)
         Me.Yeah.TabIndex = 184
         Me.Yeah.Text = "Yeah"
         Me.Yeah.UseVisualStyleBackColor = True
         '
         'Interesting
         '
-        Me.Interesting.Location = New System.Drawing.Point(331, 444)
-        Me.Interesting.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Interesting.Location = New System.Drawing.Point(248, 361)
+        Me.Interesting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Interesting.Name = "Interesting"
-        Me.Interesting.Size = New System.Drawing.Size(89, 30)
+        Me.Interesting.Size = New System.Drawing.Size(67, 24)
         Me.Interesting.TabIndex = 183
         Me.Interesting.Text = "Interesting"
         Me.Interesting.UseVisualStyleBackColor = True
@@ -972,10 +933,9 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(327, 342)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(245, 278)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(162, 17)
+        Me.Label4.Size = New System.Drawing.Size(129, 13)
         Me.Label4.TabIndex = 182
         Me.Label4.Text = "ELAB OF RESPONSE"
         '
@@ -983,10 +943,9 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(347, 81)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(260, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(201, 17)
+        Me.Label3.Size = New System.Drawing.Size(164, 13)
         Me.Label3.TabIndex = 181
         Me.Label3.Text = "ACTIONS/BODY POSITION"
         '
@@ -994,149 +953,148 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(72, 81)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(54, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 17)
+        Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 180
         Me.Label2.Text = "FACES"
         '
         'Funny2
         '
-        Me.Funny2.Location = New System.Drawing.Point(200, 107)
-        Me.Funny2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Funny2.Location = New System.Drawing.Point(150, 87)
+        Me.Funny2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Funny2.Name = "Funny2"
-        Me.Funny2.Size = New System.Drawing.Size(103, 28)
+        Me.Funny2.Size = New System.Drawing.Size(77, 23)
         Me.Funny2.TabIndex = 179
         Me.Funny2.Text = "Funny 2"
         Me.Funny2.UseVisualStyleBackColor = True
         '
         'Yelling
         '
-        Me.Yelling.Location = New System.Drawing.Point(474, 285)
-        Me.Yelling.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Yelling.Location = New System.Drawing.Point(356, 232)
+        Me.Yelling.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Yelling.Name = "Yelling"
-        Me.Yelling.Size = New System.Drawing.Size(103, 30)
+        Me.Yelling.Size = New System.Drawing.Size(77, 24)
         Me.Yelling.TabIndex = 178
         Me.Yelling.Text = "Yelling"
         Me.Yelling.UseVisualStyleBackColor = True
         '
         'Sleepy
         '
-        Me.Sleepy.Location = New System.Drawing.Point(200, 248)
-        Me.Sleepy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Sleepy.Location = New System.Drawing.Point(150, 202)
+        Me.Sleepy.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Sleepy.Name = "Sleepy"
-        Me.Sleepy.Size = New System.Drawing.Size(103, 30)
+        Me.Sleepy.Size = New System.Drawing.Size(77, 24)
         Me.Sleepy.TabIndex = 177
         Me.Sleepy.Text = "Sleepy"
         Me.Sleepy.UseVisualStyleBackColor = True
         '
         'Afraid
         '
-        Me.Afraid.Location = New System.Drawing.Point(76, 107)
-        Me.Afraid.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Afraid.Location = New System.Drawing.Point(57, 87)
+        Me.Afraid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Afraid.Name = "Afraid"
-        Me.Afraid.Size = New System.Drawing.Size(103, 28)
+        Me.Afraid.Size = New System.Drawing.Size(77, 23)
         Me.Afraid.TabIndex = 176
         Me.Afraid.Text = "Afraid"
         Me.Afraid.UseVisualStyleBackColor = True
         '
         'FunnyFace1
         '
-        Me.FunnyFace1.Location = New System.Drawing.Point(76, 284)
-        Me.FunnyFace1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FunnyFace1.Location = New System.Drawing.Point(57, 231)
+        Me.FunnyFace1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FunnyFace1.Name = "FunnyFace1"
-        Me.FunnyFace1.Size = New System.Drawing.Size(103, 30)
+        Me.FunnyFace1.Size = New System.Drawing.Size(77, 24)
         Me.FunnyFace1.TabIndex = 175
         Me.FunnyFace1.Text = "Funny 1"
         Me.FunnyFace1.UseVisualStyleBackColor = True
         '
         'Awkward
         '
-        Me.Awkward.Location = New System.Drawing.Point(76, 176)
-        Me.Awkward.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Awkward.Location = New System.Drawing.Point(57, 143)
+        Me.Awkward.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Awkward.Name = "Awkward"
-        Me.Awkward.Size = New System.Drawing.Size(103, 30)
+        Me.Awkward.Size = New System.Drawing.Size(77, 24)
         Me.Awkward.TabIndex = 174
         Me.Awkward.Text = "Awkward"
         Me.Awkward.UseVisualStyleBackColor = True
         '
         'CrossEyed
         '
-        Me.CrossEyed.Location = New System.Drawing.Point(76, 248)
-        Me.CrossEyed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CrossEyed.Location = New System.Drawing.Point(57, 202)
+        Me.CrossEyed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CrossEyed.Name = "CrossEyed"
-        Me.CrossEyed.Size = New System.Drawing.Size(103, 28)
+        Me.CrossEyed.Size = New System.Drawing.Size(77, 23)
         Me.CrossEyed.TabIndex = 173
         Me.CrossEyed.Text = "Cross Eyed"
         Me.CrossEyed.UseVisualStyleBackColor = True
         '
         'Angry
         '
-        Me.Angry.Location = New System.Drawing.Point(76, 141)
-        Me.Angry.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Angry.Location = New System.Drawing.Point(57, 115)
+        Me.Angry.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Angry.Name = "Angry"
-        Me.Angry.Size = New System.Drawing.Size(103, 28)
+        Me.Angry.Size = New System.Drawing.Size(77, 23)
         Me.Angry.TabIndex = 172
         Me.Angry.Text = "Angry"
         Me.Angry.UseVisualStyleBackColor = True
         '
         'Surprised
         '
-        Me.Surprised.Location = New System.Drawing.Point(200, 284)
-        Me.Surprised.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Surprised.Location = New System.Drawing.Point(150, 231)
+        Me.Surprised.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Surprised.Name = "Surprised"
-        Me.Surprised.Size = New System.Drawing.Size(103, 30)
+        Me.Surprised.Size = New System.Drawing.Size(77, 24)
         Me.Surprised.TabIndex = 171
         Me.Surprised.Text = "Surprised"
         Me.Surprised.UseVisualStyleBackColor = True
         '
         'Confused
         '
-        Me.Confused.Location = New System.Drawing.Point(76, 211)
-        Me.Confused.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Confused.Location = New System.Drawing.Point(57, 171)
+        Me.Confused.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Confused.Name = "Confused"
-        Me.Confused.Size = New System.Drawing.Size(103, 30)
+        Me.Confused.Size = New System.Drawing.Size(77, 24)
         Me.Confused.TabIndex = 170
         Me.Confused.Text = "Confused"
         Me.Confused.UseVisualStyleBackColor = True
         '
         'Wink
         '
-        Me.Wink.Location = New System.Drawing.Point(351, 212)
-        Me.Wink.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Wink.Location = New System.Drawing.Point(263, 172)
+        Me.Wink.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Wink.Name = "Wink"
-        Me.Wink.Size = New System.Drawing.Size(103, 28)
+        Me.Wink.Size = New System.Drawing.Size(77, 23)
         Me.Wink.TabIndex = 169
         Me.Wink.Text = "Wink"
         Me.Wink.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(682, 173)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Location = New System.Drawing.Point(512, 141)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(8, 7)
+        Me.Button2.Size = New System.Drawing.Size(6, 6)
         Me.Button2.TabIndex = 168
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'HeadDown
         '
-        Me.HeadDown.Location = New System.Drawing.Point(474, 212)
-        Me.HeadDown.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.HeadDown.Location = New System.Drawing.Point(356, 172)
+        Me.HeadDown.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeadDown.Name = "HeadDown"
-        Me.HeadDown.Size = New System.Drawing.Size(103, 28)
+        Me.HeadDown.Size = New System.Drawing.Size(77, 23)
         Me.HeadDown.TabIndex = 167
         Me.HeadDown.Text = "Head Down"
         Me.HeadDown.UseVisualStyleBackColor = True
         '
         'HeadUp
         '
-        Me.HeadUp.Location = New System.Drawing.Point(474, 177)
-        Me.HeadUp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.HeadUp.Location = New System.Drawing.Point(356, 144)
+        Me.HeadUp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeadUp.Name = "HeadUp"
-        Me.HeadUp.Size = New System.Drawing.Size(103, 30)
+        Me.HeadUp.Size = New System.Drawing.Size(77, 24)
         Me.HeadUp.TabIndex = 166
         Me.HeadUp.Text = "Head Up"
         Me.HeadUp.UseVisualStyleBackColor = True
@@ -1144,68 +1102,68 @@ Partial Class Form1
         'Clear
         '
         Me.Clear.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Clear.Location = New System.Drawing.Point(890, 641)
-        Me.Clear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Clear.Location = New System.Drawing.Point(668, 522)
+        Me.Clear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Clear.Name = "Clear"
-        Me.Clear.Size = New System.Drawing.Size(71, 28)
+        Me.Clear.Size = New System.Drawing.Size(53, 23)
         Me.Clear.TabIndex = 165
         Me.Clear.Text = "Clear"
         Me.Clear.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(219, 644)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(164, 524)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(664, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(499, 20)
         Me.TextBox1.TabIndex = 164
         '
         'Cool
         '
-        Me.Cool.Location = New System.Drawing.Point(331, 369)
-        Me.Cool.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cool.Location = New System.Drawing.Point(248, 300)
+        Me.Cool.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Cool.Name = "Cool"
-        Me.Cool.Size = New System.Drawing.Size(89, 30)
+        Me.Cool.Size = New System.Drawing.Size(67, 24)
         Me.Cool.TabIndex = 163
         Me.Cool.Text = "Cool"
         Me.Cool.UseVisualStyleBackColor = True
         '
         'Nice
         '
-        Me.Nice.Location = New System.Drawing.Point(331, 478)
-        Me.Nice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Nice.Location = New System.Drawing.Point(248, 388)
+        Me.Nice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Nice.Name = "Nice"
-        Me.Nice.Size = New System.Drawing.Size(89, 30)
+        Me.Nice.Size = New System.Drawing.Size(67, 24)
         Me.Nice.TabIndex = 162
         Me.Nice.Text = "Nice"
         Me.Nice.UseVisualStyleBackColor = True
         '
         'HeadRight
         '
-        Me.HeadRight.Location = New System.Drawing.Point(474, 105)
-        Me.HeadRight.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.HeadRight.Location = New System.Drawing.Point(356, 85)
+        Me.HeadRight.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeadRight.Name = "HeadRight"
-        Me.HeadRight.Size = New System.Drawing.Size(103, 30)
+        Me.HeadRight.Size = New System.Drawing.Size(77, 24)
         Me.HeadRight.TabIndex = 161
         Me.HeadRight.Text = "Head Right"
         Me.HeadRight.UseVisualStyleBackColor = True
         '
         'Wow
         '
-        Me.Wow.Location = New System.Drawing.Point(331, 406)
-        Me.Wow.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Wow.Location = New System.Drawing.Point(248, 330)
+        Me.Wow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Wow.Name = "Wow"
-        Me.Wow.Size = New System.Drawing.Size(89, 30)
+        Me.Wow.Size = New System.Drawing.Size(67, 24)
         Me.Wow.TabIndex = 160
         Me.Wow.Text = "Wow"
         Me.Wow.UseVisualStyleBackColor = True
         '
         'EyeLeft
         '
-        Me.EyeLeft.Location = New System.Drawing.Point(351, 178)
-        Me.EyeLeft.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.EyeLeft.Location = New System.Drawing.Point(263, 145)
+        Me.EyeLeft.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.EyeLeft.Name = "EyeLeft"
-        Me.EyeLeft.Size = New System.Drawing.Size(103, 28)
+        Me.EyeLeft.Size = New System.Drawing.Size(77, 23)
         Me.EyeLeft.TabIndex = 159
         Me.EyeLeft.Text = "Eye Left"
         Me.EyeLeft.UseVisualStyleBackColor = True
@@ -1215,50 +1173,50 @@ Partial Class Form1
         Me.StopButton.BackColor = System.Drawing.Color.Red
         Me.StopButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopButton.ForeColor = System.Drawing.Color.White
-        Me.StopButton.Location = New System.Drawing.Point(1070, 624)
+        Me.StopButton.Location = New System.Drawing.Point(809, 538)
         Me.StopButton.Margin = New System.Windows.Forms.Padding(0)
         Me.StopButton.Name = "StopButton"
-        Me.StopButton.Size = New System.Drawing.Size(259, 57)
+        Me.StopButton.Size = New System.Drawing.Size(194, 46)
         Me.StopButton.TabIndex = 158
         Me.StopButton.Text = "STOP"
         Me.StopButton.UseVisualStyleBackColor = False
         '
         'Okay
         '
-        Me.Okay.Location = New System.Drawing.Point(434, 406)
-        Me.Okay.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Okay.Location = New System.Drawing.Point(326, 330)
+        Me.Okay.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Okay.Name = "Okay"
-        Me.Okay.Size = New System.Drawing.Size(83, 30)
+        Me.Okay.Size = New System.Drawing.Size(62, 24)
         Me.Okay.TabIndex = 157
         Me.Okay.Text = "Okay"
         Me.Okay.UseVisualStyleBackColor = True
         '
         'Oh
         '
-        Me.Oh.Location = New System.Drawing.Point(434, 369)
-        Me.Oh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Oh.Location = New System.Drawing.Point(326, 300)
+        Me.Oh.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Oh.Name = "Oh"
-        Me.Oh.Size = New System.Drawing.Size(83, 30)
+        Me.Oh.Size = New System.Drawing.Size(62, 24)
         Me.Oh.TabIndex = 156
         Me.Oh.Text = "Oh"
         Me.Oh.UseVisualStyleBackColor = True
         '
         'HeadLeft
         '
-        Me.HeadLeft.Location = New System.Drawing.Point(474, 141)
-        Me.HeadLeft.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.HeadLeft.Location = New System.Drawing.Point(356, 115)
+        Me.HeadLeft.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HeadLeft.Name = "HeadLeft"
-        Me.HeadLeft.Size = New System.Drawing.Size(103, 30)
+        Me.HeadLeft.Size = New System.Drawing.Size(77, 24)
         Me.HeadLeft.TabIndex = 155
         Me.HeadLeft.Text = "Head Left"
         Me.HeadLeft.UseVisualStyleBackColor = True
         '
         'EyeRight
         '
-        Me.EyeRight.Location = New System.Drawing.Point(351, 141)
-        Me.EyeRight.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.EyeRight.Location = New System.Drawing.Point(263, 115)
+        Me.EyeRight.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.EyeRight.Name = "EyeRight"
-        Me.EyeRight.Size = New System.Drawing.Size(103, 30)
+        Me.EyeRight.Size = New System.Drawing.Size(77, 24)
         Me.EyeRight.TabIndex = 154
         Me.EyeRight.Text = "Eye Right"
         Me.EyeRight.UseVisualStyleBackColor = True
@@ -1266,49 +1224,44 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(559, 20)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(419, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 48)
+        Me.Label1.Size = New System.Drawing.Size(169, 39)
         Me.Label1.TabIndex = 153
         Me.Label1.Text = "TO BE TITLED"
         '
         'blink
         '
-        Me.blink.Location = New System.Drawing.Point(351, 107)
-        Me.blink.Margin = New System.Windows.Forms.Padding(4)
+        Me.blink.Location = New System.Drawing.Point(263, 87)
         Me.blink.Name = "blink"
-        Me.blink.Size = New System.Drawing.Size(103, 28)
+        Me.blink.Size = New System.Drawing.Size(77, 23)
         Me.blink.TabIndex = 152
         Me.blink.Text = "Blink"
         Me.blink.UseVisualStyleBackColor = True
         '
         'neutral
         '
-        Me.neutral.Location = New System.Drawing.Point(200, 141)
-        Me.neutral.Margin = New System.Windows.Forms.Padding(4)
+        Me.neutral.Location = New System.Drawing.Point(150, 115)
         Me.neutral.Name = "neutral"
-        Me.neutral.Size = New System.Drawing.Size(103, 28)
+        Me.neutral.Size = New System.Drawing.Size(77, 23)
         Me.neutral.TabIndex = 151
         Me.neutral.Text = "Neutral"
         Me.neutral.UseVisualStyleBackColor = True
         '
         'frown
         '
-        Me.frown.Location = New System.Drawing.Point(200, 176)
-        Me.frown.Margin = New System.Windows.Forms.Padding(4)
+        Me.frown.Location = New System.Drawing.Point(150, 143)
         Me.frown.Name = "frown"
-        Me.frown.Size = New System.Drawing.Size(103, 30)
+        Me.frown.Size = New System.Drawing.Size(77, 24)
         Me.frown.TabIndex = 150
         Me.frown.Text = "Sad"
         Me.frown.UseVisualStyleBackColor = True
         '
         'smile
         '
-        Me.smile.Location = New System.Drawing.Point(200, 211)
-        Me.smile.Margin = New System.Windows.Forms.Padding(4)
+        Me.smile.Location = New System.Drawing.Point(150, 171)
         Me.smile.Name = "smile"
-        Me.smile.Size = New System.Drawing.Size(103, 30)
+        Me.smile.Size = New System.Drawing.Size(77, 24)
         Me.smile.TabIndex = 149
         Me.smile.Text = "Smile"
         Me.smile.UseVisualStyleBackColor = True
@@ -1317,35 +1270,39 @@ Partial Class Form1
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(75, 601)
+        Me.Label15.Location = New System.Drawing.Point(56, 488)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 17)
+        Me.Label15.Size = New System.Drawing.Size(47, 13)
         Me.Label15.TabIndex = 261
         Me.Label15.Text = "DELAY"
         '
         'Script1
         '
-        Me.Script1.Location = New System.Drawing.Point(557, 557)
+        Me.Script1.Location = New System.Drawing.Point(808, 420)
+        Me.Script1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Script1.Name = "Script1"
-        Me.Script1.Size = New System.Drawing.Size(75, 30)
+        Me.Script1.Size = New System.Drawing.Size(56, 24)
         Me.Script1.TabIndex = 262
         Me.Script1.Text = "Script 1"
         Me.Script1.UseVisualStyleBackColor = True
         '
         'Script2
         '
-        Me.Script2.Location = New System.Drawing.Point(651, 557)
+        Me.Script2.Location = New System.Drawing.Point(878, 420)
+        Me.Script2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Script2.Name = "Script2"
-        Me.Script2.Size = New System.Drawing.Size(75, 30)
+        Me.Script2.Size = New System.Drawing.Size(56, 24)
         Me.Script2.TabIndex = 263
         Me.Script2.Text = "Script 2"
         Me.Script2.UseVisualStyleBackColor = True
         '
         'Script3
         '
-        Me.Script3.Location = New System.Drawing.Point(745, 557)
+        Me.Script3.Location = New System.Drawing.Point(949, 420)
+        Me.Script3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Script3.Name = "Script3"
-        Me.Script3.Size = New System.Drawing.Size(75, 30)
+        Me.Script3.Size = New System.Drawing.Size(56, 24)
         Me.Script3.TabIndex = 264
         Me.Script3.Text = "Script 3"
         Me.Script3.UseVisualStyleBackColor = True
@@ -1354,17 +1311,54 @@ Partial Class Form1
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(554, 530)
+        Me.Label16.Location = New System.Drawing.Point(806, 398)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(73, 17)
+        Me.Label16.Size = New System.Drawing.Size(60, 13)
         Me.Label16.TabIndex = 265
         Me.Label16.Text = "SCRIPTS"
         '
+        'chkAutoAction
+        '
+        Me.chkAutoAction.AutoSize = True
+        Me.chkAutoAction.Location = New System.Drawing.Point(406, 502)
+        Me.chkAutoAction.Name = "chkAutoAction"
+        Me.chkAutoAction.Size = New System.Drawing.Size(71, 17)
+        Me.chkAutoAction.TabIndex = 269
+        Me.chkAutoAction.Text = "Automate"
+        Me.chkAutoAction.UseVisualStyleBackColor = True
+        '
+        'lblSpeechHeard
+        '
+        Me.lblSpeechHeard.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSpeechHeard.Location = New System.Drawing.Point(403, 453)
+        Me.lblSpeechHeard.Name = "lblSpeechHeard"
+        Me.lblSpeechHeard.Size = New System.Drawing.Size(393, 53)
+        Me.lblSpeechHeard.TabIndex = 267
+        Me.lblSpeechHeard.Text = "Fritz Heard: "
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(400, 431)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(146, 13)
+        Me.Label19.TabIndex = 266
+        Me.Label19.Text = "SPEECH RECOGNITION"
+        '
+        'tmrSpeech
+        '
+        Me.tmrSpeech.Enabled = True
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1415, 694)
+        Me.ClientSize = New System.Drawing.Size(1061, 594)
+        Me.Controls.Add(Me.chkAutoAction)
+        Me.Controls.Add(Me.lblSpeechHeard)
+        Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Script3)
         Me.Controls.Add(Me.Script2)
@@ -1482,7 +1476,6 @@ Partial Class Form1
         Me.Controls.Add(Me.neutral)
         Me.Controls.Add(Me.frown)
         Me.Controls.Add(Me.smile)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -1611,5 +1604,9 @@ Partial Class Form1
     Friend WithEvents Script2 As System.Windows.Forms.Button
     Friend WithEvents Script3 As System.Windows.Forms.Button
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents chkAutoAction As System.Windows.Forms.CheckBox
+    Friend WithEvents lblSpeechHeard As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents tmrSpeech As System.Windows.Forms.Timer
 
 End Class
