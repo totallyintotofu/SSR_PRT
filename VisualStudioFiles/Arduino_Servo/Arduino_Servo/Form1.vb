@@ -14,7 +14,7 @@ Public Class Form1
     WithEvents speaker As New SpeechSynthesizer()
     Public Event VisemeReached As EventHandler(Of VisemeReachedEventArgs)
     Public Event SpeakCompleted As EventHandler(Of SpeakCompletedEventArgs)
-
+    Dim stop_Clicked As Boolean = False
     'Dim promptBuilder As PromptBuilder
     'Dim returnValue As Prompt
 
@@ -112,7 +112,6 @@ Public Class Form1
         '19:     d, t, n
         '20:     k, g, ng
         '21:     p, b, m
-
         Try
             If (e2.Viseme = 1 Or e2.Viseme = 2 Or e2.Viseme = 9 Or e2.Viseme = 8) Then
                 SerialPort1.Open()
@@ -137,6 +136,7 @@ Public Class Form1
 
 
 
+
     End Sub
 
     Private Sub EyeRight_Click(sender As Object, e As EventArgs) Handles EyeRight.Click
@@ -149,6 +149,7 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        EyeRight.BackColor = Color.Gold
     End Sub
 
     Private Sub EyeLeft_Click(sender As Object, e As EventArgs) Handles EyeLeft.Click
@@ -161,12 +162,14 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        EyeLeft.BackColor = Color.Gold
     End Sub
 
     Private Sub StopButton_Click(sender As Object, e As EventArgs) Handles StopButton.Click
+        stop_Clicked = True
         speaker.SpeakAsyncCancelAll()
         SerialPort1.Open()
-        SerialPort1.Write("10")
+        SerialPort1.Write("AA")
         SerialPort1.Close()
         Timer1.Enabled = False
         Timer2.Enabled = False
@@ -177,6 +180,7 @@ Public Class Form1
         SerialPort1.Open()
         SerialPort1.Write("A")
         SerialPort1.Close()
+        HeadLeft.BackColor = Color.Gold
     End Sub
 
     Private Sub HeadRight_Click(sender As Object, e As EventArgs) Handles HeadRight.Click
@@ -189,6 +193,7 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        HeadRight.BackColor = Color.Gold
     End Sub
     Private Sub Oh_Click(sender As Object, e As EventArgs) Handles Oh.Click
         Timer1.Enabled = False
@@ -227,7 +232,7 @@ Public Class Form1
         Timer2.Enabled = False
         Timer3.Enabled = False
         Dim string2say As String
-        string2say = "Wow.  Ok."
+        string2say = "Wow."
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
@@ -427,6 +432,7 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        HeadUp.BackColor = Color.Gold
     End Sub
 
     Private Sub HeadDown_Click(sender As Object, e As EventArgs) Handles HeadDown.Click
@@ -439,17 +445,18 @@ Public Class Form1
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+        HeadUp.BackColor = Color.Gold
     End Sub
 
-    Private Sub Convo1_Click(sender As Object, e As EventArgs)
-        Dim string2say As String
-        string2say = "Hello. My name is Fritz. I am having a very good day."
-        speaker.Rate = 0.1
-        speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
-        speaker.SpeakAsync(string2say)
+    'Private Sub Convo1_Click(sender As Object, e As EventArgs)
+    '    Dim string2say As String
+    '    string2say = "Hello. My name is Fritz. I am having a very good day."
+    '    speaker.Rate = 0.1
+    '    speaker.Volume = 100
+    '    speaker.SelectVoice("IVONA 2 Ivy OEM")
+    '    speaker.SpeakAsync(string2say)
 
-    End Sub
+    'End Sub
 
     Private Sub Wink_Click(sender As Object, e As EventArgs) Handles Wink.Click
         Timer1.Enabled = False
@@ -499,9 +506,13 @@ Public Class Form1
         Timer3.Enabled = True
     End Sub
     Private Sub speaker_SpeakCompleted(sender As Object, e2 As System.Speech.Synthesis.SpeakCompletedEventArgs) Handles speaker.SpeakCompleted
-        Timer1.Enabled = True
-        Timer2.Enabled = True
-        Timer3.Enabled = True
+        If (stop_Clicked = True) Then
+            Return
+        Else
+            Timer1.Enabled = True
+            Timer2.Enabled = True
+            Timer3.Enabled = True
+        End If
     End Sub
 
     Private Sub CrossEyed_Click(sender As Object, e As EventArgs) Handles CrossEyed.Click
@@ -594,7 +605,7 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Script1_Click(sender As Object, e As EventArgs)
+    Private Sub Script1_Click(sender As Object, e As EventArgs) Handles Script1.Click
         Timer1.Enabled = False
         Timer2.Enabled = False
         Timer3.Enabled = False
@@ -618,7 +629,7 @@ Public Class Form1
         string2say8 = "Oh yeah, and I also played with my friend Jimmy. We went off the diving board. I did a cannon ball."
         string2say9 = "Okay."
         string2say10 = "Cool"
-        speaker.Rate = 0.1
+        speaker.Rate = -2
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         System.Threading.Thread.Sleep(2000)
@@ -666,7 +677,7 @@ Public Class Form1
         speaker.Speak(string2say6)
         System.Threading.Thread.Sleep(3000)
         SerialPort1.Open()
-        SerialPort1.Write("S")
+        SerialPort1.Write("R")
         SerialPort1.Close()
         speaker.Speak(string2say7)
         System.Threading.Thread.Sleep(900)
@@ -687,7 +698,7 @@ Public Class Form1
         Timer3.Enabled = True
     End Sub
 
-    Private Sub Script2_Click(sender As Object, e As EventArgs)
+    Private Sub Script2_Click(sender As Object, e As EventArgs) Handles Script2.Click
         Timer1.Enabled = False
         Timer2.Enabled = False
         Timer3.Enabled = False
@@ -752,7 +763,7 @@ Public Class Form1
         speaker.Speak(string2say8)
         System.Threading.Thread.Sleep(1500)
         SerialPort1.Open()
-        SerialPort1.Write("S")
+        SerialPort1.Write("R")
         SerialPort1.Close()
         SerialPort1.Open()
         SerialPort1.Write("R")
@@ -768,7 +779,7 @@ Public Class Form1
         Timer3.Enabled = True
     End Sub
 
-    Private Sub Script3_Click(sender As Object, e As EventArgs)
+    Private Sub Script3_Click(sender As Object, e As EventArgs) Handles Script3.Click
         Timer1.Enabled = False
         Timer2.Enabled = False
         Timer3.Enabled = False
@@ -800,7 +811,7 @@ Public Class Form1
         speaker.Speak(string2say)
         System.Threading.Thread.Sleep(2000)
         SerialPort1.Open()
-        SerialPort1.Write("S")
+        SerialPort1.Write("R")
         SerialPort1.Close()
         SerialPort1.Open()
         SerialPort1.Write("R")
@@ -863,6 +874,7 @@ Public Class Form1
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Staller2_Click(sender As Object, e As EventArgs) Handles Staller2.Click
@@ -877,6 +889,7 @@ Public Class Form1
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Staller3_Click(sender As Object, e As EventArgs) Handles Staller3.Click
@@ -891,6 +904,7 @@ Public Class Form1
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Staller4_Click(sender As Object, e As EventArgs) Handles Staller4.Click
@@ -905,8 +919,12 @@ Public Class Form1
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Interrupt1_Click(sender As Object, e As EventArgs) Handles Interrupt1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "Oh yeah and I forgot that I wanted to say something else"
         SerialPort1.Open()
@@ -914,9 +932,15 @@ Public Class Form1
         SerialPort1.Close()
         speaker.Speak(string2say)
         Interrupt1.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Interrupt2_Click(sender As Object, e As EventArgs) Handles Interrupt2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "Also there was something else I wanted to add..."
         SerialPort1.Open()
@@ -924,6 +948,9 @@ Public Class Form1
         SerialPort1.Close()
         speaker.Speak(string2say)
         Interrupt2.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub LikeClear_Click(sender As Object, e As EventArgs) Handles LikeClear.Click
         LikeBox.Clear()
@@ -934,6 +961,9 @@ Public Class Form1
     End Sub
 
     Private Sub FaveSelect_Click(sender As Object, e As EventArgs) Handles Fave.SelectedIndexChanged
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim message1, message2 As String
         message1 = Fave.Text
         If message1 = "animal" Then
@@ -959,6 +989,9 @@ Public Class Form1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync("My favorite " + message1 + "is " + message2)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub FaveClear_Click(sender As Object, e As EventArgs) Handles FaveCont.Click
@@ -989,6 +1022,9 @@ Public Class Form1
         speaker.SpeakAsync(message2)
     End Sub
     Private Sub Recess1_Click(sender As Object, e As EventArgs) Handles Recess1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "I love recess."
         SerialPort1.Open()
@@ -999,17 +1035,29 @@ Public Class Form1
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
         Recess1.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Recess2_Click(sender As Object, e As EventArgs) Handles Recess2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "Playing in the playground is always fun!"
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub History1_Click(sender As Object, e As EventArgs) Handles History1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "History is pretty boring"
         speaker.Rate = 0.5
@@ -1017,16 +1065,28 @@ Public Class Form1
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
         History1.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub History2_Click(sender As Object, e As EventArgs) Handles History2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "It's not fun memorizing facts about old people"
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Cookies1_Click(sender As Object, e As EventArgs) Handles Cookies1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "Do you like cookies?  I love cookies"
         speaker.Rate = 0.1
@@ -1034,16 +1094,28 @@ Public Class Form1
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
         Cookies1.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Cookies2_Click(sender As Object, e As EventArgs) Handles Cookies2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "My favorite kinds are chocolate chip, but I also really like peanut butter cookies."
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Friend1_Click(sender As Object, e As EventArgs) Handles Friend1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "Do you know, I've got a friend named Jimmy, and he's really funny."
         speaker.Rate = 0.1
@@ -1051,195 +1123,330 @@ Public Class Form1
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
         Friend1.BackColor = Color.Gold
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Friend2_Click(sender As Object, e As EventArgs) Handles Friend2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim string2say As String
         string2say = "One time he made such a silly face, I couldn't stop laughing for five whole minutes!"
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Beach1_Click(sender As Object, e As EventArgs) Handles Beach1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "This weekend I went to the beach"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Beach2_Click(sender As Object, e As EventArgs) Handles Beach2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I always make sandcastles when I go to the beach.  I'm a pro at a making sandcastles!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Beach3_Click(sender As Object, e As EventArgs) Handles Beach3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I collect seashells so I love finding really cool seashells when I'm at the beach"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Party1_Click(sender As Object, e As EventArgs) Handles Party1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "This weekend was my friend Charlie's birthday.  He had an awesome birthday party"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Party2_Click(sender As Object, e As EventArgs) Handles Party2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "We played some fun games and there was a cool robot dance"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Party3_Click(sender As Object, e As EventArgs) Handles Party3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I ate really good cake at the party too!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Game1_Click(sender As Object, e As EventArgs) Handles Game1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "This weekend I played some video games."
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Game2_Click(sender As Object, e As EventArgs) Handles Game2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I played Mario Cart and beat my high score and made it to the next level!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Game3_Click(sender As Object, e As EventArgs) Handles Game3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I love playing racing games. I wish I could watch a car race in real life!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Lego1_Click(sender As Object, e As EventArgs) Handles Lego1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "This weekend I played with legos"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Lego2_Click(sender As Object, e As EventArgs) Handles Lego2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I built a really cool tower.  Next time I'm gonna build one so tall, it's going to be taller than this table!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Lego3_Click(sender As Object, e As EventArgs) Handles Lego3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Lego's are really fun because you can build anything you want!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub DontKnow_Click(sender As Object, e As EventArgs) Handles DontKnow.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I don't know"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Yes_Click(sender As Object, e As EventArgs) Handles Yes.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Yes"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub No_Click(sender As Object, e As EventArgs) Handles No.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "No"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Sorry_Click(sender As Object, e As EventArgs) Handles Sorry.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Sorry"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub HBU_Click(sender As Object, e As EventArgs) Handles HBU.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "How about you?"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Exclaim1_Click(sender As Object, e As EventArgs) Handles Exclaim1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "How cool!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Exclaim2_Click(sender As Object, e As EventArgs) Handles Exclaim2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Wow!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Exclaim3_Click(sender As Object, e As EventArgs) Handles Exclaim3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "That's great!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Exclaim4_Click(sender As Object, e As EventArgs) Handles Exclaim4.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "You're awesome!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Pause_Click(sender As Object, e As EventArgs) Handles Pause.Click
@@ -1257,6 +1464,9 @@ Public Class Form1
     End Sub
 
     Private Sub LikeBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles LikeBox.KeyPress
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         If Asc(e.KeyChar) = 13 Then
             e.Handled = True
             Dim message As String
@@ -1267,9 +1477,15 @@ Public Class Form1
             speaker.SpeakAsync("I like " + message)
             LikeBox.Clear()
         End If
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub DontLikeBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DontLikeBox.KeyPress
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         If Asc(e.KeyChar) = 13 Then
             e.Handled = True
             Dim message As String
@@ -1280,9 +1496,15 @@ Public Class Form1
             speaker.SpeakAsync("I don't like " + message)
             DontLikeBox.Clear()
         End If
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         If Asc(e.KeyChar) = 13 Then
             e.Handled = True
             Dim message As String
@@ -1293,11 +1515,17 @@ Public Class Form1
             speaker.SpeakAsync(message)
             TextBox1.Clear()
         End If
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub MoveDrop_SelectedIndexChanged(sender As Object, e As EventArgs) Handles MoveDrop.SelectedIndexChanged
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         Dim selection As String
-        selection = MoveDrop.SelectedText
+        selection = MoveDrop.Text
         If selection = "eyes" Then
             Dim string2say As String
             string2say = "Look what I can do with my eyes!!"
@@ -1314,13 +1542,35 @@ Public Class Form1
             'builder.AppendText("Get in the house now.", PromptEmphasis.Strong)
             'speaker.SpeakAsync(builder)
         ElseIf selection = "mouth" Then
-            'to be filled
+            Dim string2say As String
+            string2say = "Look what I can do with my mouth!!"
+            speaker.Rate = 0.1
+            speaker.Volume = 100
+            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.Speak(string2say)
+            SerialPort1.Open()
+            SerialPort1.Write("Z")
+            SerialPort1.Close()
         Else
-            'to be filled
+            Dim string2say As String
+            string2say = "Look what faces I can make!!"
+            speaker.Rate = 0.1
+            speaker.Volume = 100
+            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.Speak(string2say)
+            SerialPort1.Open()
+            SerialPort1.Write("Y")
+            SerialPort1.Close()
         End If
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub DelayBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DelayBox.KeyPress
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         If Asc(e.KeyChar) = 13 Then
             e.Handled = True
             Dim message As String
@@ -1328,11 +1578,14 @@ Public Class Form1
             speaker.Rate = 0.2
             speaker.Volume = 100
             speaker.SelectVoice("IVONA 2 Ivy OEM")
-            'insert arduino position with delay
+            Thread.Sleep(2500)
             speaker.SpeakAsync(message)
             DelayBox.Clear()
             DelayBox.BackColor = Color.Gold
         End If
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub DelayClear_Click(sender As Object, e As EventArgs) Handles DelayClear.Click
@@ -1340,68 +1593,113 @@ Public Class Form1
     End Sub
 
     Private Sub ImGood_Click(sender As Object, e As EventArgs) Handles ImGood.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I'm good"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub ImOkay_Click(sender As Object, e As EventArgs) Handles ImOkay.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I'm okay"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub NotGreat_Click(sender As Object, e As EventArgs) Handles NotGreat.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Eh. Not great."
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub NotGreatCont_Click(sender As Object, e As EventArgs) Handles NotGreatCont.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I had too much math homework and I couldn't figure out a bunch of the problems"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Guess_Click(sender As Object, e As EventArgs) Handles Guess.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "I guess"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Maybe_Click(sender As Object, e As EventArgs) Handles Maybe.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Maybe"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Story1_Click_1(sender As Object, e As EventArgs) Handles Story1.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Do you wanna hear a story?"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
     Private Sub Story2_Click(sender As Object, e As EventArgs) Handles Story2.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
@@ -1411,20 +1709,33 @@ Public Class Form1
     End Sub
 
     Private Sub Story3_Click(sender As Object, e As EventArgs) Handles Story3.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Isn't that cool?"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
 
     Private Sub Story4_Click(sender As Object, e As EventArgs) Handles Story4.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
         speaker.Rate = 0.1
         speaker.Volume = 100
         speaker.SelectVoice("IVONA 2 Ivy OEM")
         Dim string2say As String
         string2say = "Why don't you tell me a story!"
         speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
     End Sub
+
 End Class
