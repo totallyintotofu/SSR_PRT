@@ -772,10 +772,10 @@ void loop()
          mouthopenmed();
          eyesstraightUD();
          delay(500);
-         headstraightUD();
+         headstraightUD();// neutral smile 
          headstraightLR();
          mouthclosed();
-         lipsneutral();
+         lipsup();
          eyesopen();
          eyesstraightLR();
          eyesstraightUD();
@@ -802,7 +802,7 @@ void loop()
         lipsdown();
         mouthopenmed();
         delay(600);
-        lipsneutral();
+        lipsup();
         mouthclosed();
         delay(600);
       }

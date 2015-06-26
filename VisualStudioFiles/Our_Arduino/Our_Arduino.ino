@@ -146,12 +146,6 @@ void eyessilly()
   delay(150);
   detacheyeballs();
 }
-
-void eyessquirrely()
-{
-  attacheyeballs();
-
-}
   
 void eyescrossed()
 {
@@ -201,6 +195,11 @@ void eyesstraightUD()
   detacheyeballs();
 }
 
+void eyessquirrely()
+{
+  
+}
+
 void lipsup()
 {
   attachlips();
@@ -228,19 +227,11 @@ void lipsdown()
   detachlips();
 }
 
-void lipsslant1()
+void lipsslant()
 {
   attachlips();
   myservo10.write(120);//left lip down
   myservo9.write(200);//right lip slightly up 
-  delay(200);
-  detachlips();
-}
-void lipsslant2()
-{
-  attachlips();
-  myservo10.write(30);//left lip up
-  myservo9.write(110);//right lip slightly down
   delay(200);
   detachlips();
 }
@@ -325,14 +316,6 @@ void mouthopensmall()
   detachmouth();
 }
 
-void stopall()
-{
-  detachlips();
-  detacheyeballs();
-  detachhead();
-  detacheyelids();
-  detachmouth();
-}
 /////////////////////////////////////////////////////////////////////////////////
 
 void loop() 
@@ -391,9 +374,12 @@ void loop()
       }
        else if(pos=='10') {
         // STOP EVERYTHING
-        delay(400);
-        wink();
-        delay(400);
+        detachlips();
+        detacheyeballs();
+        detacheyelids();
+        detachmouth();
+        detachhead();
+        delay(150);
       }
        
      else if(pos=='A') {
@@ -413,14 +399,14 @@ void loop()
      else if(pos=='E') {
         //WINK
         lipsup();
-        wink();     
+        wink();
       }   
       else if(pos=='F') {
         // CONFUSED
         
         eyesup();
         eyesright();
-        lipsslant1();
+        lipsslant();
         eyesopenwide();
         mouthopenmed();
         eyesstraightUD();
@@ -451,7 +437,7 @@ void loop()
       else if(pos=='J') {
         // AWKWARD
        
-        lipsslant1();
+        lipsslant();
         eyeshalfshut();
         eyesleft();
         mouthclosed();
@@ -737,83 +723,7 @@ void loop()
         delay(100);
       }  
       
-  
-       else if(pos=='Y')
-      {
-        //Look at all the faces I can make!
-         lipsup(); //1)Smile
-         delay(500);
-         lipsdown(); //2) Frown
-         delay(500);
-         mouthopenbig(); //Surprise
-         eyesopenwide();
-         eyesstraightLR();
-         eyesstraightUD();
-         delay(500);
-         eyescrossed();// Eyes Crossed
-         lipsup();
-         mouthclosed();
-         delay(500);
-         lipsdown(); //Angry
-         eyeshalfshut();
-         mouthopenmed();
-         eyesstraightLR();
-         eyesstraightUD();
-         delay(500);
-         eyessilly(); //Funny
-         eyesopenwide();
-         lipsup();
-         mouthopenbig();
-         delay(500);
-         eyesup(); //Confused
-         eyesright();
-         lipsslant1();
-         eyesopenwide();
-         mouthopenmed();
-         eyesstraightUD();
-         delay(500);
-         headstraightUD();
-         headstraightLR();
-         mouthclosed();
-         lipsneutral();
-         eyesopen();
-         eyesstraightLR();
-         eyesstraightUD();
-         delay(400);
-
-      }
-      else if(pos=='Z') { 
-        //Look what I can do with my mouth!
-        lipsup();
-        mouthopenbig();
-        delay(600);
-        lipsslant1();
-        mouthclosed();
-        delay(600);
-        lipsslant2();
-        mouthclosed();
-        delay(600);
-        lipsslant1();
-        mouthclosed();
-        delay(600);
-        lipsslant2();
-        mouthclosed();
-        delay(600);
-        lipsdown();
-        mouthopenmed();
-        delay(600);
-        lipsneutral();
-        mouthclosed();
-        delay(600);
-      }
-      
-      else if(pos=='AA')
-      {
-        stopall();
-      }
- 
-     
-      /*
+  /*
    else if(pos=='W') {
         // I CAN CAN ALSO BE VERY SILLY! LOOK AT ALL THE FUNNY FACES I CAN MAKE!
         //1) funny face 2) loopy eyes 3) cross eyed
@@ -1154,6 +1064,69 @@ void loop()
         
       }
       */
+       else if(pos=='W')
+      {
+        //Look at all the faces I can make!
+         lipsup(); //1)Smile
+         delay(300);
+         lipsdown(); //2) Frown
+         delay(300);
+         mouthopenbig(); //Surprise
+         delay(50);
+         eyesopenwide();
+         delay(50);
+         eyesstraightLR();
+         delay(50);
+         eyesstraightUD();
+         delay(300);
+         lipsdown(); //Angry
+         delay(50);
+         eyeshalfshut();
+         delay(50);
+         mouthopenmed();
+         delay(50);
+         eyesstraightLR();
+         delay(50);
+         eyesstraightUD();
+         delay(300);
+         eyesup(); //Confused
+         delay(50);
+         eyesright();
+         delay(50);
+         lipsslant();
+         delay(50);
+         eyesopenwide();
+         delay(50);
+         mouthopenmed();
+         delay(50);
+         eyesstraightUD();
+         delay(300);
+         eyessilly(); //Funny
+         delay(50);
+         lipsup();
+         delay(50);
+         mouthopenbig();
+         delay(300);
+      }
+      else if(pos=='X') { 
+        //Look what I can do with my eyes
+        lipsup();
+        delay(50);
+        mouthopenbig();
+        delay(200);
+        lipsslant();
+        delay(50);
+        mouthclosed();
+        delay(200);
+        lipsdown();
+        delay(100);
+        mouthopenmed();
+        delay(200);
+        lipsneutral();
+        delay(50);
+        mouthclosed();
+        delay(500);
+      }
     } 
   } 
 } 
