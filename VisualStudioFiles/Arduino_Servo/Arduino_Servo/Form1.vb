@@ -6,6 +6,9 @@ Imports System.Speech.Synthesis
 Imports System.IO
 Imports System.IO.Ports
 Imports System.Threading
+Imports Fleck
+Imports System.Security.Cryptography.X509Certificates
+Imports System.Speech.Recognition
 
 Public Class Form1
 
@@ -16,10 +19,14 @@ Public Class Form1
     Public Event SpeakCompleted As EventHandler(Of SpeakCompletedEventArgs)
     Dim stop_Clicked As Boolean = False
     Dim myName As String
+    Dim LEVoice As String = "IVONA 2 Ivy OEM" 'Microsoft Anna OR IVONA 2 Ivy OEM
     'Dim promptBuilder As PromptBuilder
     'Dim returnValue As Prompt
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        '#JC Init the Speech Recognition
+        InitSpeechRecoginition()
+
         SerialPort1.Close()
         SerialPort1.PortName = "COM6" 'define your port
         SerialPort1.BaudRate = 9600
@@ -83,7 +90,7 @@ Public Class Form1
         string2say = "Hello! I'm going to try to say something and move my mouth at the same time!! How am I doing??  After a few sentences, does my mouth keep up with my words??"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
 
     End Sub
@@ -213,7 +220,7 @@ Public Class Form1
         string2say = "Oh"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -229,7 +236,7 @@ Public Class Form1
         string2say = "Okay..."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -245,7 +252,7 @@ Public Class Form1
         string2say = "Wow."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -261,7 +268,7 @@ Public Class Form1
         string2say = "Interesting....."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -277,7 +284,7 @@ Public Class Form1
         string2say = "Cool"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -292,7 +299,7 @@ Public Class Form1
         string2say = "Nice"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -307,7 +314,7 @@ Public Class Form1
         string2say = "Yeah"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -322,7 +329,7 @@ Public Class Form1
         string2say = "Uhhhhh huh...."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -337,7 +344,7 @@ Public Class Form1
         string2say = "Hello"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -351,7 +358,7 @@ Public Class Form1
         string2say = "Hi, my name is Fritz"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -393,7 +400,7 @@ Public Class Form1
     '    string2say5 = "Yeah. I played on the playground. The slide was very big."
     '    speaker.Rate = -2
     '    speaker.Volume = 100
-    '    speaker.SelectVoice("IVONA 2 Ivy OEM")
+    '    speaker.SelectVoice(LEVoice)
     '    Thread.Sleep(2000)
     '    SerialPort1.Open()
     '    SerialPort1.Write("0")
@@ -463,7 +470,7 @@ Public Class Form1
     '    string2say = "Hello. My name is Fritz. I am having a very good day."
     '    speaker.Rate = -2
     '    speaker.Volume = 100
-    '    speaker.SelectVoice("IVONA 2 Ivy OEM")
+    '    speaker.SelectVoice(LEVoice)
     '    speaker.SpeakAsync(string2say)
 
     'End Sub
@@ -636,7 +643,7 @@ Public Class Form1
         string2say10 = "Cool"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Thread.Sleep(2000)
         SerialPort1.Open()
         SerialPort1.Write("0")
@@ -727,7 +734,7 @@ Public Class Form1
         string2say9 = "TV is funny.  Like this face!"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Thread.Sleep(3000)
         SerialPort1.Open()
         SerialPort1.Write("R")
@@ -804,7 +811,7 @@ Public Class Form1
         string2say7 = "Does that mean we can have some right now?"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Thread.Sleep(1500)
         SerialPort1.Open()
         SerialPort1.Write("9")
@@ -879,7 +886,7 @@ Public Class Form1
         string2say = "That's a good question!... Let me think..."
         speaker.Rate = 0.2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -894,7 +901,7 @@ Public Class Form1
         string2say = "I'm not sure...  I'll have to ask my mom."
         speaker.Rate = 0.2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -909,7 +916,7 @@ Public Class Form1
         string2say = "Welllllll...."
         speaker.Rate = 0.5
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -924,7 +931,7 @@ Public Class Form1
         string2say = "Sorry, can you say that again?"
         speaker.Rate = 0.2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -996,7 +1003,7 @@ Public Class Form1
         End If
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync("My favorite " + message1 + "is " + message2)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1027,7 +1034,7 @@ Public Class Form1
         End If
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(message2)
     End Sub
     Private Sub Recess1_Click(sender As Object, e As EventArgs) Handles Recess1.Click
@@ -1041,7 +1048,7 @@ Public Class Form1
         SerialPort1.Close()
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Recess1.BackColor = Color.Gold
         Timer1.Enabled = True
@@ -1056,7 +1063,7 @@ Public Class Form1
         string2say = "Playing in the playground is always fun!"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1071,7 +1078,7 @@ Public Class Form1
         string2say = "History is pretty boring"
         speaker.Rate = 0.5
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         History1.BackColor = Color.Gold
         Timer1.Enabled = True
@@ -1086,7 +1093,7 @@ Public Class Form1
         string2say = "It's not fun memorizing facts about old people"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1100,7 +1107,7 @@ Public Class Form1
         string2say = "Do you like cookies?  I love cookies"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Cookies1.BackColor = Color.Gold
         Timer1.Enabled = True
@@ -1115,7 +1122,7 @@ Public Class Form1
         string2say = "My favorite kinds are chocolate chip, but I also really like peanut butter cookies."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1129,7 +1136,7 @@ Public Class Form1
         string2say = "Do you know, I've got a friend named Jimmy, and he's really funny."
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Friend1.BackColor = Color.Gold
         Timer1.Enabled = True
@@ -1144,7 +1151,7 @@ Public Class Form1
         string2say = "One time he made such a silly face, I couldn't stop laughing for five whole minutes!"
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1156,7 +1163,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "This weekend I went to the beach"
         speaker.SpeakAsync(string2say)
@@ -1171,7 +1178,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I always make sandcastles when I go to the beach.  I'm a pro at a making sandcastles!"
         speaker.SpeakAsync(string2say)
@@ -1185,7 +1192,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I collect seashells so I love finding really cool seashells when I'm at the beach"
         speaker.SpeakAsync(string2say)
@@ -1199,7 +1206,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "This weekend was my friend Charlie's birthday.  He had an awesome birthday party"
         speaker.SpeakAsync(string2say)
@@ -1214,7 +1221,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "We played some fun games and there was a cool robot dance"
         speaker.SpeakAsync(string2say)
@@ -1228,7 +1235,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I ate really good cake at the party too!"
         speaker.SpeakAsync(string2say)
@@ -1242,7 +1249,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "This weekend I played some video games."
         speaker.SpeakAsync(string2say)
@@ -1257,7 +1264,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I played Mario Cart and beat my high score and made it to the next level!"
         speaker.SpeakAsync(string2say)
@@ -1271,7 +1278,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I love playing racing games. I wish I could watch a car race in real life!"
         speaker.SpeakAsync(string2say)
@@ -1286,7 +1293,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "This weekend I played with legos"
         speaker.SpeakAsync(string2say)
@@ -1301,7 +1308,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I built a really cool tower.  Next time I'm gonna build one so tall, it's going to be taller than this table!"
         speaker.SpeakAsync(string2say)
@@ -1315,7 +1322,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Lego's are really fun because you can build anything you want!"
         speaker.SpeakAsync(string2say)
@@ -1329,7 +1336,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I don't know"
         speaker.SpeakAsync(string2say)
@@ -1344,7 +1351,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Yes"
         speaker.SpeakAsync(string2say)
@@ -1359,7 +1366,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "No"
         speaker.SpeakAsync(string2say)
@@ -1374,7 +1381,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Sorry"
         speaker.SpeakAsync(string2say)
@@ -1389,7 +1396,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "How about you?"
         speaker.SpeakAsync(string2say)
@@ -1404,7 +1411,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "How cool!"
         speaker.SpeakAsync(string2say)
@@ -1419,7 +1426,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Wow!"
         speaker.SpeakAsync(string2say)
@@ -1434,7 +1441,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "That's great!"
         speaker.SpeakAsync(string2say)
@@ -1449,7 +1456,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "You're awesome " + myName
         speaker.SpeakAsync(string2say)
@@ -1500,7 +1507,7 @@ Public Class Form1
             message = LikeBox.Text
             speaker.Rate = 0.2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.SpeakAsync("I like " + message)
             LikeBox.Clear()
         End If
@@ -1519,7 +1526,7 @@ Public Class Form1
             message = DontLikeBox.Text
             speaker.Rate = 0.2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.SpeakAsync("I don't like " + message)
             DontLikeBox.Clear()
         End If
@@ -1538,7 +1545,7 @@ Public Class Form1
             message = TextBox1.Text
             speaker.Rate = 0.2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.SpeakAsync(message)
             TextBox1.Clear()
         End If
@@ -1558,7 +1565,7 @@ Public Class Form1
             string2say = "Look what I can do with my eyes!!"
             speaker.Rate = -2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.Speak(string2say)
             SerialPort1.Open()
             SerialPort1.Write("S")
@@ -1573,7 +1580,7 @@ Public Class Form1
             string2say = "Look what I can do with my mouth!!"
             speaker.Rate = -2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.Speak(string2say)
             SerialPort1.Open()
             SerialPort1.Write("Z")
@@ -1583,7 +1590,7 @@ Public Class Form1
             string2say = "Look what faces I can make!!"
             speaker.Rate = -2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             speaker.Speak(string2say)
             SerialPort1.Open()
             SerialPort1.Write("Y")
@@ -1604,7 +1611,7 @@ Public Class Form1
             message = DelayBox.Text
             speaker.Rate = 0.2
             speaker.Volume = 100
-            speaker.SelectVoice("IVONA 2 Ivy OEM")
+            speaker.SelectVoice(LEVoice)
             Thread.Sleep(2500)
             speaker.SpeakAsync(message)
             DelayBox.Clear()
@@ -1625,7 +1632,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I'm good"
         speaker.SpeakAsync(string2say)
@@ -1640,7 +1647,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I'm okay"
         speaker.SpeakAsync(string2say)
@@ -1655,7 +1662,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Not great."
         speaker.SpeakAsync(string2say)
@@ -1670,7 +1677,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I had too much math homework and I couldn't figure out a bunch of the problems"
         speaker.SpeakAsync(string2say)
@@ -1685,7 +1692,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "I guess"
         speaker.SpeakAsync(string2say)
@@ -1700,7 +1707,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Maybe"
         speaker.SpeakAsync(string2say)
@@ -1715,7 +1722,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Do you wanna hear a story?"
         speaker.SpeakAsync(string2say)
@@ -1729,7 +1736,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "One time, I was at a pool party.  It was my friend Jimmy's birthday, and he decided we should play a game.  He dropped these jewels at the bottom of the pool, and you had to see how many you could collect in thirty seconds.  Most people got around five.  But my friend Andy?  He was underwater for so long, we weren't sure if something had happened!  We were about to send someone in to look for him, when all of a sudden, he popped out of the pool.  He said he saw something sparkling at the bottom and thought it was a jewel, but it was covered under some dirt at the bottom of the pool, so he had to scrape it out.  And guess what?  He found a necklace Jimmy's sister dropped in the pool a long time ago!  We were all looking for Jewels, but, really, it was Andy who found the real treasure!"
         speaker.SpeakAsync(string2say)
@@ -1741,7 +1748,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Do you want to hear another story?"
         speaker.SpeakAsync(string2say)
@@ -1755,7 +1762,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Once, I had a playdate at my friend Alex's house and we really wanted to bake something. We both liked cookies and pizza, so we thought it would be an awesome idea to bake a cookie pizza! I used chocolate chips, mini oreos, marshmallows, and peanut butter chips as my toppings. Alex made a crazy pizza with gummy worms, M and M's, and bacon. Those were the weirdest cookie toppings I had ever seen. We put our cookie pizzas in the oven, and once they were done, we were so hungry, we ate 4 slices! I tried some of Alex's cookie pizza, and it was actually pretty good. Maybe I'll try making a crazy cookie pizza next time. That was one of the best playdates I've ever had."
         speaker.SpeakAsync(string2say)
@@ -1767,7 +1774,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Why don't you tell me a story!"
         speaker.SpeakAsync(string2say)
@@ -1795,7 +1802,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Bye " + myName + ". That was fun!"
         speaker.SpeakAsync(string2say)
@@ -1810,7 +1817,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "See you next time!"
         speaker.SpeakAsync(string2say)
@@ -1825,7 +1832,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "What did you do today?"
         speaker.SpeakAsync(string2say)
@@ -1840,7 +1847,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "Today, I went to the park"
         speaker.SpeakAsync(string2say)
@@ -1855,7 +1862,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "There was some really cool music playing in the park"
         speaker.SpeakAsync(string2say)
@@ -1870,7 +1877,7 @@ Public Class Form1
         Timer3.Enabled = False
         speaker.Rate = -2
         speaker.Volume = 100
-        speaker.SelectVoice("IVONA 2 Ivy OEM")
+        speaker.SelectVoice(LEVoice)
         Dim string2say As String
         string2say = "You're real cool!"
         speaker.SpeakAsync(string2say)
@@ -1878,4 +1885,145 @@ Public Class Form1
         Timer2.Enabled = True
         Timer3.Enabled = True
     End Sub
+
+#Region "Speech Recognition"
+    'I tried to group all the speech recognition code together but there were some places that I couldn't.
+    'Just look for '#JC
+    Private AutomationResponses As New Dictionary(Of String, BtnPress)
+    Private Delegate Sub BtnPress(sender As Object, e As EventArgs)
+    Private YesResponse As BtnPress
+    Private NoResponse As BtnPress
+    Private WhyResponse As BtnPress
+    Private Speech As String
+
+    'Network Socket for Chrome communication
+    Dim allSockets As New List(Of IWebSocketConnection)()
+    Dim server As New WebSocketServer("wss://0.0.0.0:8182")
+
+
+    Sub InitSpeechRecoginition()
+
+        Dim keywords As New Choices()
+        keywords.Add("game")
+        keywords.Add("story")
+        keywords.Add("fritz")
+        keywords.Add("l e")
+        keywords.Add("hello")
+        keywords.Add("how are you")
+        keywords.Add("why")
+
+        'Setup the websocket server to receive connections from Chrome
+        server.Certificate = New X509Certificate2("fritz.pfx", "oursslpass")
+
+        server.Start(Function(socket)
+                         socket.OnOpen = Function()
+                                             allSockets.Add(socket)
+                                         End Function
+                         socket.OnClose = Function()
+                                              allSockets.Remove(socket)
+                                          End Function
+                         socket.OnMessage = Function(message)
+                                                If message <> "Connected Successfully!" Then
+                                                    SpeechRecognized(message)
+                                                Else
+                                                    Speech = "(Re)Connected to Chrome dictation page successfully."
+                                                End If
+
+                                            End Function
+
+                     End Function)
+
+
+        'Load the AutomationActions Before Starting to Listen
+        'These map potential phrases to actions. They could be improved however
+        'in order to follow a script, or not repeat questions, etc.
+        AutomationResponses.Add("tell me a story", AddressOf Story2_Click)
+        AutomationResponses.Add("story", AddressOf Story2_Click)
+        AutomationResponses.Add("yes", YesResponse) 'Not working with references, not sure why.
+        AutomationResponses.Add("no", NoResponse) 'Not working with references, not sure why.
+        AutomationResponses.Add("hello fritz", AddressOf Hello_Click)
+        AutomationResponses.Add("hello", AddressOf Hi_Click)
+        AutomationResponses.Add("how are you", AddressOf NotGreat_Click)
+        AutomationResponses.Add("how're you doing", AddressOf NotGreat_Click)
+        AutomationResponses.Add("what did you do this weekend", AddressOf Lego1_Click)
+        AutomationResponses.Add("why", AddressOf NotGreatCont_Click) 'Not working with references, not sure why. Should be WhyResponse if that was working.
+
+    End Sub
+
+    'This is called automatically whenever speech is successfully recognized.
+    Public Sub SpeechRecognized(heardtext As String)
+        Dim matchThreshhold As Double = 0.5
+        Dim currentMatchVal As Double = 0.0
+        Dim currentMatch As String
+
+        'This is a delegate for any action we may take.
+        Dim mydel As BtnPress
+
+        'Because we are in a different thread, we update a class variable which a timer sets the form to display (We should use a delegate here)
+        Speech = heardtext
+
+        'Check for common misconceptions
+        If (heardtext = "l e") Then heardtext = "Eli" 'l e is really close to Eli. We check for l e because Microsoft Speech thinks Eli should sounds like Ely
+        heardtext = heardtext.Replace("for its", "fritz") 'Another common misconception that I am course correcting.
+        heardtext = heardtext.Replace("y", "why") 'Another common misconception that I am course correcting.
+        heardtext = Trim(heardtext)
+
+        'If we are accepting automatic actions, score the phrase against all our potential responses, find the best and implement the action.
+        If chkAutoAction.Checked Then
+            For Each p In AutomationResponses
+                If (Compare(p.Key, heardtext) > currentMatchVal) Then
+                    currentMatchVal = Compare(p.Key, heardtext)
+                    currentMatch = p.Key
+                End If
+            Next
+            If (currentMatchVal >= matchThreshhold) Then
+                AutomationResponses.TryGetValue(currentMatch, mydel)
+                If (Not mydel Is Nothing) Then
+                    mydel.Invoke(Nothing, Nothing)
+                End If
+            End If
+        End If
+    End Sub
+
+    Function Compare(ByVal str1 As String, ByVal str2 As String) As Double
+        Dim str1arr As New List(Of String)
+        Dim str2arr As New List(Of String)
+        str1arr.AddRange(str1.Split(" "))
+        str2arr.AddRange(str2.Split(" "))
+        Dim x As Double
+        Dim y As Double
+        Dim matches As Double = 0
+        If str1arr.Count > 0 And str2arr.Count > 0 Then
+            For x = 0 To str1arr.Count - 1
+                For y = 0 To str2arr.Count - 1
+                    If (str1arr(x) <> "" And str2arr(y) <> "") Then
+                        If str1arr(x) = str2arr(y) Then
+                            str2arr(y) = ""
+                            str1arr(x) = ""
+                            Exit For
+                        End If
+                    End If
+                Next
+            Next
+            If str1arr.Count > str2arr.Count Then
+                y = str1arr.Count
+                For x = 0 To str1arr.Count - 1
+                    If str1arr(x) = "" Then matches = matches + 1
+                Next
+                Return matches / y
+            Else
+                y = str2arr.Count
+                For x = 0 To str2arr.Count - 1
+                    If str2arr(x) = "" Then matches = matches + 1
+                Next
+                Return matches / y
+            End If
+        End If
+        Return 0
+    End Function
+    'This timer updates our form with the latest speech if any.
+    Private Sub tmrSpeech_Tick(sender As Object, e As EventArgs) Handles tmrSpeech.Tick
+        lblSpeechHeard.Text = Speech
+    End Sub
+#End Region
 End Class
