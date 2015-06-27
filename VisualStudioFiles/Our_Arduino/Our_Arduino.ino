@@ -70,10 +70,10 @@ void eyesblink()
 {
   attacheyelids();
   myservoA0.write(0);
-  myservoA1.write(10);
+  myservoA1.write(0);
   delay(150);
   myservoA0.write(135); //open left eyelid
-  myservoA1.write(55); // open right eyelid
+  myservoA1.write(155); // open right eyelid
   delay(150);
   detacheyelids();
 }
@@ -94,7 +94,7 @@ void eyeshalfshut()
 {
   attacheyelids();
   myservoA0.write(100);
-  myservoA1.write(40);
+  myservoA1.write(120);
   delay(150);
   detacheyelids();
 }
@@ -103,7 +103,7 @@ void eyesopen()
 {
   attacheyelids();
   myservoA0.write(135); //open left eyelid
-  myservoA1.write(55); // open right eyelid 
+  myservoA1.write(155); // open right eyelid 
   delay(150);
   detacheyelids();
 }
@@ -112,7 +112,7 @@ void eyesopenwide()
 {
   attacheyelids();
   myservoA0.write(150); //open left eyelid
-  myservoA1.write(75); // open right eyelid 
+  myservoA1.write(170); // open right eyelid 
   delay(150);
   detacheyelids();
 }
