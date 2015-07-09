@@ -355,7 +355,7 @@ Public Class Form1
         Timer2.Enabled = False
         Timer3.Enabled = False
         Dim string2say As String
-        string2say = "Hi, my name is Fritz"
+        string2say = "Hi, my name is L-E"
         speaker.Rate = -2
         speaker.Volume = 100
         speaker.SelectVoice(LEVoice)
@@ -1070,6 +1070,21 @@ Public Class Form1
         Timer3.Enabled = True
     End Sub
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
+        Dim string2say As String
+        string2say = "How are you?"
+        speaker.Rate = -2
+        speaker.Volume = 100
+        speaker.SelectVoice(LEVoice)
+        speaker.SpeakAsync(string2say)
+        Timer1.Enabled = True
+        Timer2.Enabled = True
+        Timer3.Enabled = True
+    End Sub
+
     Private Sub History1_Click(sender As Object, e As EventArgs) Handles History1.Click
         Timer1.Enabled = False
         Timer2.Enabled = False
@@ -1458,7 +1473,7 @@ Public Class Form1
         speaker.Volume = 100
         speaker.SelectVoice(LEVoice)
         Dim string2say As String
-        string2say = "You're awesome " + myName
+        string2say = "You're AWESOME! " + myName
         speaker.SpeakAsync(string2say)
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -1941,7 +1956,7 @@ Public Class Form1
         AutomationResponses.Add("story", AddressOf Story2_Click)
         AutomationResponses.Add("yes", YesResponse) 'Not working with references, not sure why.
         AutomationResponses.Add("no", NoResponse) 'Not working with references, not sure why.
-        AutomationResponses.Add("hello fritz", AddressOf Hello_Click)
+        AutomationResponses.Add("hello L-E", AddressOf Hello_Click)
         AutomationResponses.Add("hello", AddressOf Hi_Click)
         AutomationResponses.Add("how are you", AddressOf NotGreat_Click)
         AutomationResponses.Add("how're you doing", AddressOf NotGreat_Click)

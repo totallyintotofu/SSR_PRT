@@ -139,3 +139,6 @@ C:\Users\JC Snider\Desktop\Fritz Project\SSR_PRT\VisualStudioFiles\Arduino_Servo
 C:\Users\JC Snider\Desktop\Fritz Project\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Form1.resources
 C:\Users\JC Snider\Desktop\Fritz Project\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.Resources.resources
 C:\Users\JC Snider\Desktop\Fritz Project\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbproj.GenerateResource.Cache
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\fritz.pfx
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\bin\Debug\Fleck.dll
+C:\Users\Laura\Documents\GitHub\SSR_PRT\VisualStudioFiles\Arduino_Servo\Arduino_Servo\obj\x86\Debug\Arduino_Servo.vbprojResolveAssemblyReference.cache

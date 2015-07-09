@@ -73,7 +73,7 @@ void eyesblink()
   myservoA1.write(10);
   delay(150);
   myservoA0.write(135); //open left eyelid
-  myservoA1.write(55); // open right eyelid
+  myservoA1.write(155); // open right eyelid
   delay(150);
   detacheyelids();
 }
@@ -94,7 +94,7 @@ void eyeshalfshut()
 {
   attacheyelids();
   myservoA0.write(100);
-  myservoA1.write(40);
+  myservoA1.write(120);
   delay(150);
   detacheyelids();
 }
@@ -103,7 +103,7 @@ void eyesopen()
 {
   attacheyelids();
   myservoA0.write(135); //open left eyelid
-  myservoA1.write(55); // open right eyelid 
+  myservoA1.write(155); // open right eyelid 
   delay(150);
   detacheyelids();
 }
@@ -112,7 +112,7 @@ void eyesopenwide()
 {
   attacheyelids();
   myservoA0.write(150); //open left eyelid
-  myservoA1.write(75); // open right eyelid 
+  myservoA1.write(175); // open right eyelid 
   delay(150);
   detacheyelids();
 }
@@ -498,151 +498,47 @@ void loop()
       }
       else if(pos=='P') {
         // BURP
-        myservo3.attach(A4);
-        myservo6.attach(6); // 
-        myservo7.attach(7);  // 
-        myservo4.attach(4); // 
-        myservo5.attach(5);  
-        myservo10.attach(10); // 
-        myservo9.attach(9);   //
-        myservo12.attach(12); 
-        //myservo12.attach(12); // 
-        //myservo11.attach(11);  // 
-        myservoA0.attach(A0); // 
-        myservoA1.attach(A1);  // 
-        myservo8.attach(8);
-        myservoA3.attach(A3);
-        
-        myservo10.write(145);  // left lip down
-        myservo9.write(18);  // right lip down
-        myservo8.write(70);
-        //myservo12.write(110); // left eyebrow sad
-        //myservo11.write(80); // right eyebrow sad
-        myservoA0.write(150);
-        myservoA1.write(100);
-        myservo6.write(25); // 
-        myservo7.write(67);  // 
-        myservo4.write(145);
-        myservo5.write(60);
-        myservo12.write(20);
-        myservo3.write(225);
-        delay(12000);
-        myservo8.write(115);
-        myservoA3.write(225);
-        delay(400);
-        myservo3.detach();
-        myservo10.detach(); //
-        myservo9.detach(); //
-        myservo8.detach();
-        //myservo12.detach(); // 
-        //myservo11.detach();  // 
-        myservoA0.detach(); // 
-        myservoA1.detach();  // 
-        myservo6.detach(); // left right
-        myservo7.detach();  // left right
-        myservo4.detach(); // up down
-        myservo5.detach();  // up down
-        myservo12.detach();
-        myservoA3.detach();
+        lipsdown();
+        mouthopenbig();
       }
        else if(pos=='Q') {
         // LOOPY EYES        
-        delay(200);
-        myservo8.attach(8); //
-        myservo10.attach(10); // 
-        myservo9.attach(9); // 
-        myservo12.attach(12); // 
-        myservo11.attach(11);  //
-        myservo6.attach(6); // 
-        myservo7.attach(7);  // 
-        myservo4.attach(4); // 
-        myservo5.attach(5);  // 
-        myservoA0.attach(A0); // 
-        myservoA1.attach(A1); // 
-        myservo3.attach(A4);
-        myservoA3.attach(A3);
-        
-        myservo8.write(90);  // 
-        myservo10.write(70);  // 
-        myservo9.write(120);  // 
-
-        delay(100);
-        myservo7.write(68);  //
-        myservo6.write(25);  
-        delay(100);  
-        myservo6.write(80);// 
-        myservo7.write(30); 
-        delay(100);  
-        myservo4.write(130); //
-        myservo5.write(60);
-        delay(100);  
-        myservo4.write(35); //
-        myservo5.write(30);
-        delay(100);  
-        myservo6.write(-60);// 
-        myservo7.write(95); 
-        delay(100);  
-        myservo4.write(130); //
-        myservo5.write(60);
-      
-        delay(100);
-        myservoA0.write(150); // 
-        myservoA1.write(100); //
-        myservo12.write(20); // 
-        myservo11.write(75);  //
-        myservo3.write(225);
-        myservoA3.write(225);
-        delay(250);
-        
-        myservo8.detach(); // 
-        myservo10.detach(); // 
-        myservo9.detach(); // 
-        myservo11.detach();  // 
-        myservo6.detach(); // 
-        myservo7.detach();  // 
-        myservo4.detach(); // 
-        myservo5.detach();  // 
-        myservoA0.detach(); // 
-        myservoA1.detach(); // 
-        myservo3.detach();
-        myservoA3.detach();
-        delay(200);
       }
      if(pos=='R') {
         // ANIMATED TALKING
-        myservoA0.attach(A0);   //
-        myservoA1.attach(A1);   //
-        myservo12.attach(12); // 
-        myservo11.attach(11); //  
-        myservo6.attach(6); // 
-        myservo7.attach(7);  // 
-        myservo4.attach(4); // 
-        myservo5.attach(5);  // 
-        myservo3.attach(A4);
-        myservoA3.attach(A3);
-        
-        myservo3.write(225);
-        myservoA0.write(125); // 
-        myservoA1.write(55); //
-        myservo12.write(10);   //
-        myservo11.write(75);    // 
-        myservo6.write(25); // 
-        myservo7.write(67);  // 
-        myservo4.write(130);
-        myservo5.write(60);
-        myservoA3.write(225);
-        delay(400);
-        
-        myservo3.detach(); 
-        myservo12.detach();  //
-        myservo11.detach();  // 
-        myservoA0.detach();  //  
-        myservoA1.detach();  //  
-         myservo6.detach(); // 
-        myservo7.detach();  // 
-        myservo4.detach(); // 
-        myservo5.detach();  //
-       myservoA3.detach(); 
+//        myservoA0.attach(A0);   //
+//        myservoA1.attach(A1);   //
+//        myservo12.attach(12); // 
+//        myservo11.attach(11); //  
+//        myservo6.attach(6); // 
+//        myservo7.attach(7);  // 
+//        myservo4.attach(4); // 
+//        myservo5.attach(5);  // 
+//        myservo3.attach(A4);
+//        myservoA3.attach(A3);
+//        
+//        myservo3.write(225);
+//        myservoA0.write(125); // 
+//        myservoA1.write(55); //
+//        myservo12.write(10);   //
+//        myservo11.write(75);    // 
+//        myservo6.write(25); // 
+//        myservo7.write(67);  // 
+//        myservo4.write(130);
+//        myservo5.write(60);
+//        myservoA3.write(225);
+//        delay(400);
+//        
+//        myservo3.detach(); 
+//        myservo12.detach();  //
+//        myservo11.detach();  // 
+//        myservoA0.detach();  //  
+//        myservoA1.detach();  //  
+//         myservo6.detach(); // 
+//        myservo7.detach();  // 
+//        myservo4.detach(); // 
+//        myservo5.detach();  //
+//       myservoA3.detach(); 
       }
         else if(pos=='S') { 
         //Look what I can do with my eyes
@@ -687,29 +583,9 @@ void loop()
       }
         else if(pos=='T') {
         // BLINK, TURN, BACK TO NEUTRAL
-    
-        myservoA0.attach(A0);
-        myservoA1.attach(A1);
-        myservoA0.write(75);
-         myservoA1.write(75);
-         delay(150);
-        myservoA0.write(150); //open eyelid
-        myservoA1.write(100);
-         delay(150); 
-         myservoA0.detach();
-         myservoA1.detach();
-         delay(100);
-        myservo11.attach(11);
-        myservoA0.attach(A0); //  
-        myservoA1.attach(A1);
-        myservoA0.write(150); //  
-        myservoA1.write(100);
-        myservo11.write(110);   // head right
-        delay(250);
-        myservo11.detach();
-        myservoA0.detach(); //  
-        myservoA1.detach();
-        delay(4000);         
+        eyesblink();
+        headstraightLR();
+        lipsup();
       }
     
       else if(pos=='U') {
@@ -719,22 +595,11 @@ void loop()
          
       else if(pos=='V') {
         //I CAN TURN MY HEAD!
-        myservo11.attach(11);
-        myservoA0.attach(A0); //  
-        myservoA1.attach(A1);
-        myservo11.write(50); 
-        myservoA0.write(150); //  
-        myservoA1.write(100);   // head left
-        delay(350);
-        myservo11.detach();
-        myservoA0.detach(); //  
-        myservoA1.detach();
-        delay(300);
-        myservo11.attach(11);
-        myservo11.write(110);   // head right
-        delay(350);
-        myservo11.detach();
-        delay(100);
+        headleft();
+        headleft();
+        headright();
+        headright();
+        headstraightLR();
       }  
       
   

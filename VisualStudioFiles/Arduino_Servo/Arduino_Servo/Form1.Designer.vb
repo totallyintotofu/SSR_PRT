@@ -888,7 +888,7 @@ Partial Class Form1
         Me.Hi.Name = "Hi"
         Me.Hi.Size = New System.Drawing.Size(123, 24)
         Me.Hi.TabIndex = 188
-        Me.Hi.Text = "Hi, my name is Fritz"
+        Me.Hi.Text = "Hi, my name is L-E"
         Me.Hi.UseVisualStyleBackColor = True
         '
         'Hello
