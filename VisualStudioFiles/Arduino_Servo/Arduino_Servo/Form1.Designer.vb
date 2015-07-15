@@ -151,7 +151,7 @@ Partial Class Form1
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Bye = New System.Windows.Forms.Button()
         Me.SeeYou = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.HowAreYou = New System.Windows.Forms.Button()
         Me.TodayQ = New System.Windows.Forms.Button()
         Me.TodayA = New System.Windows.Forms.Button()
         Me.TodayACont = New System.Windows.Forms.Button()
@@ -161,6 +161,7 @@ Partial Class Form1
         Me.lblSpeechHeard = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.tmrSpeech = New System.Windows.Forms.Timer(Me.components)
+        Me.Script4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -1294,27 +1295,27 @@ Partial Class Form1
         Me.Script1.Location = New System.Drawing.Point(777, 416)
         Me.Script1.Margin = New System.Windows.Forms.Padding(2)
         Me.Script1.Name = "Script1"
-        Me.Script1.Size = New System.Drawing.Size(56, 24)
+        Me.Script1.Size = New System.Drawing.Size(52, 24)
         Me.Script1.TabIndex = 262
         Me.Script1.Text = "Script 1"
         Me.Script1.UseVisualStyleBackColor = True
         '
         'Script2
         '
-        Me.Script2.Location = New System.Drawing.Point(837, 416)
+        Me.Script2.Location = New System.Drawing.Point(833, 416)
         Me.Script2.Margin = New System.Windows.Forms.Padding(2)
         Me.Script2.Name = "Script2"
-        Me.Script2.Size = New System.Drawing.Size(56, 24)
+        Me.Script2.Size = New System.Drawing.Size(51, 24)
         Me.Script2.TabIndex = 263
         Me.Script2.Text = "Script 2"
         Me.Script2.UseVisualStyleBackColor = True
         '
         'Script3
         '
-        Me.Script3.Location = New System.Drawing.Point(897, 416)
+        Me.Script3.Location = New System.Drawing.Point(888, 416)
         Me.Script3.Margin = New System.Windows.Forms.Padding(2)
         Me.Script3.Name = "Script3"
-        Me.Script3.Size = New System.Drawing.Size(56, 24)
+        Me.Script3.Size = New System.Drawing.Size(51, 24)
         Me.Script3.TabIndex = 264
         Me.Script3.Text = "Script 3"
         Me.Script3.UseVisualStyleBackColor = True
@@ -1388,15 +1389,15 @@ Partial Class Form1
         Me.SeeYou.Text = "See you next time!"
         Me.SeeYou.UseVisualStyleBackColor = True
         '
-        'Button5
+        'HowAreYou
         '
-        Me.Button5.Location = New System.Drawing.Point(591, 85)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(132, 24)
-        Me.Button5.TabIndex = 272
-        Me.Button5.Text = "How are you?"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.HowAreYou.Location = New System.Drawing.Point(591, 85)
+        Me.HowAreYou.Margin = New System.Windows.Forms.Padding(2)
+        Me.HowAreYou.Name = "HowAreYou"
+        Me.HowAreYou.Size = New System.Drawing.Size(132, 24)
+        Me.HowAreYou.TabIndex = 272
+        Me.HowAreYou.Text = "How are you?"
+        Me.HowAreYou.UseVisualStyleBackColor = True
         '
         'TodayQ
         '
@@ -1479,11 +1480,22 @@ Partial Class Form1
         '
         Me.tmrSpeech.Enabled = True
         '
+        'Script4
+        '
+        Me.Script4.Location = New System.Drawing.Point(943, 416)
+        Me.Script4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Script4.Name = "Script4"
+        Me.Script4.Size = New System.Drawing.Size(51, 24)
+        Me.Script4.TabIndex = 281
+        Me.Script4.Text = "Script 4"
+        Me.Script4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(996, 572)
+        Me.ClientSize = New System.Drawing.Size(1004, 572)
+        Me.Controls.Add(Me.Script4)
         Me.Controls.Add(Me.chkAutoAction)
         Me.Controls.Add(Me.lblSpeechHeard)
         Me.Controls.Add(Me.Label22)
@@ -1492,7 +1504,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TodayACont)
         Me.Controls.Add(Me.TodayA)
         Me.Controls.Add(Me.TodayQ)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.HowAreYou)
         Me.Controls.Add(Me.SeeYou)
         Me.Controls.Add(Me.Bye)
         Me.Controls.Add(Me.Label21)
@@ -1750,7 +1762,7 @@ Partial Class Form1
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Bye As System.Windows.Forms.Button
     Friend WithEvents SeeYou As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents HowAreYou As System.Windows.Forms.Button
     Friend WithEvents TodayQ As System.Windows.Forms.Button
     Friend WithEvents TodayA As System.Windows.Forms.Button
     Friend WithEvents TodayACont As System.Windows.Forms.Button
@@ -1760,5 +1772,6 @@ Partial Class Form1
     Friend WithEvents lblSpeechHeard As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents tmrSpeech As System.Windows.Forms.Timer
+    Friend WithEvents Script4 As System.Windows.Forms.Button
 
 End Class
