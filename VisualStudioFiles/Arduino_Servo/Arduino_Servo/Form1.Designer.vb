@@ -151,12 +151,17 @@ Partial Class Form1
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Bye = New System.Windows.Forms.Button()
         Me.SeeYou = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.HowAreYou = New System.Windows.Forms.Button()
         Me.TodayQ = New System.Windows.Forms.Button()
         Me.TodayA = New System.Windows.Forms.Button()
         Me.TodayACont = New System.Windows.Forms.Button()
         Me.YoureCool = New System.Windows.Forms.Button()
         Me.Story4 = New System.Windows.Forms.Button()
+        Me.chkAutoAction = New System.Windows.Forms.CheckBox()
+        Me.lblSpeechHeard = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.tmrSpeech = New System.Windows.Forms.Timer(Me.components)
+        Me.Script4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -773,7 +778,7 @@ Partial Class Form1
         '
         'Staller4
         '
-        Me.Staller4.Location = New System.Drawing.Point(481, 540)
+        Me.Staller4.Location = New System.Drawing.Point(645, 540)
         Me.Staller4.Margin = New System.Windows.Forms.Padding(2)
         Me.Staller4.Name = "Staller4"
         Me.Staller4.Size = New System.Drawing.Size(136, 24)
@@ -783,7 +788,7 @@ Partial Class Form1
         '
         'Staller3
         '
-        Me.Staller3.Location = New System.Drawing.Point(481, 510)
+        Me.Staller3.Location = New System.Drawing.Point(645, 510)
         Me.Staller3.Margin = New System.Windows.Forms.Padding(2)
         Me.Staller3.Name = "Staller3"
         Me.Staller3.Size = New System.Drawing.Size(136, 24)
@@ -793,7 +798,7 @@ Partial Class Form1
         '
         'Staller2
         '
-        Me.Staller2.Location = New System.Drawing.Point(481, 481)
+        Me.Staller2.Location = New System.Drawing.Point(645, 481)
         Me.Staller2.Margin = New System.Windows.Forms.Padding(2)
         Me.Staller2.Name = "Staller2"
         Me.Staller2.Size = New System.Drawing.Size(136, 23)
@@ -803,7 +808,7 @@ Partial Class Form1
         '
         'Staller1
         '
-        Me.Staller1.Location = New System.Drawing.Point(481, 453)
+        Me.Staller1.Location = New System.Drawing.Point(645, 453)
         Me.Staller1.Margin = New System.Windows.Forms.Padding(2)
         Me.Staller1.Name = "Staller1"
         Me.Staller1.Size = New System.Drawing.Size(136, 24)
@@ -815,7 +820,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(478, 431)
+        Me.Label8.Location = New System.Drawing.Point(642, 431)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(70, 13)
         Me.Label8.TabIndex = 194
@@ -825,7 +830,7 @@ Partial Class Form1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(819, 431)
+        Me.Label7.Location = New System.Drawing.Point(825, 447)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(127, 13)
         Me.Label7.TabIndex = 193
@@ -836,7 +841,7 @@ Partial Class Form1
         Me.ResumeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ResumeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResumeButton.ForeColor = System.Drawing.Color.White
-        Me.ResumeButton.Location = New System.Drawing.Point(891, 457)
+        Me.ResumeButton.Location = New System.Drawing.Point(897, 473)
         Me.ResumeButton.Margin = New System.Windows.Forms.Padding(0)
         Me.ResumeButton.Name = "ResumeButton"
         Me.ResumeButton.Size = New System.Drawing.Size(94, 40)
@@ -849,7 +854,7 @@ Partial Class Form1
         Me.Pause.BackColor = System.Drawing.Color.Gold
         Me.Pause.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pause.ForeColor = System.Drawing.Color.White
-        Me.Pause.Location = New System.Drawing.Point(790, 457)
+        Me.Pause.Location = New System.Drawing.Point(796, 473)
         Me.Pause.Margin = New System.Windows.Forms.Padding(0)
         Me.Pause.Name = "Pause"
         Me.Pause.Size = New System.Drawing.Size(88, 40)
@@ -884,7 +889,7 @@ Partial Class Form1
         Me.Hi.Name = "Hi"
         Me.Hi.Size = New System.Drawing.Size(123, 24)
         Me.Hi.TabIndex = 188
-        Me.Hi.Text = "Hi, my name is Fritz"
+        Me.Hi.Text = "Hi, my name is L-E"
         Me.Hi.UseVisualStyleBackColor = True
         '
         'Hello
@@ -1181,7 +1186,7 @@ Partial Class Form1
         Me.StopButton.BackColor = System.Drawing.Color.Red
         Me.StopButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StopButton.ForeColor = System.Drawing.Color.White
-        Me.StopButton.Location = New System.Drawing.Point(790, 507)
+        Me.StopButton.Location = New System.Drawing.Point(796, 523)
         Me.StopButton.Margin = New System.Windows.Forms.Padding(0)
         Me.StopButton.Name = "StopButton"
         Me.StopButton.Size = New System.Drawing.Size(194, 46)
@@ -1287,30 +1292,30 @@ Partial Class Form1
         '
         'Script1
         '
-        Me.Script1.Location = New System.Drawing.Point(387, 453)
+        Me.Script1.Location = New System.Drawing.Point(777, 416)
         Me.Script1.Margin = New System.Windows.Forms.Padding(2)
         Me.Script1.Name = "Script1"
-        Me.Script1.Size = New System.Drawing.Size(56, 24)
+        Me.Script1.Size = New System.Drawing.Size(52, 24)
         Me.Script1.TabIndex = 262
         Me.Script1.Text = "Script 1"
         Me.Script1.UseVisualStyleBackColor = True
         '
         'Script2
         '
-        Me.Script2.Location = New System.Drawing.Point(387, 482)
+        Me.Script2.Location = New System.Drawing.Point(833, 416)
         Me.Script2.Margin = New System.Windows.Forms.Padding(2)
         Me.Script2.Name = "Script2"
-        Me.Script2.Size = New System.Drawing.Size(56, 24)
+        Me.Script2.Size = New System.Drawing.Size(51, 24)
         Me.Script2.TabIndex = 263
         Me.Script2.Text = "Script 2"
         Me.Script2.UseVisualStyleBackColor = True
         '
         'Script3
         '
-        Me.Script3.Location = New System.Drawing.Point(387, 510)
+        Me.Script3.Location = New System.Drawing.Point(888, 416)
         Me.Script3.Margin = New System.Windows.Forms.Padding(2)
         Me.Script3.Name = "Script3"
-        Me.Script3.Size = New System.Drawing.Size(56, 24)
+        Me.Script3.Size = New System.Drawing.Size(51, 24)
         Me.Script3.TabIndex = 264
         Me.Script3.Text = "Script 3"
         Me.Script3.UseVisualStyleBackColor = True
@@ -1319,7 +1324,7 @@ Partial Class Form1
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(385, 431)
+        Me.Label16.Location = New System.Drawing.Point(775, 394)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(60, 13)
@@ -1384,15 +1389,15 @@ Partial Class Form1
         Me.SeeYou.Text = "See you next time!"
         Me.SeeYou.UseVisualStyleBackColor = True
         '
-        'Button5
+        'HowAreYou
         '
-        Me.Button5.Location = New System.Drawing.Point(591, 85)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(132, 24)
-        Me.Button5.TabIndex = 272
-        Me.Button5.Text = "How are you?"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.HowAreYou.Location = New System.Drawing.Point(591, 85)
+        Me.HowAreYou.Margin = New System.Windows.Forms.Padding(2)
+        Me.HowAreYou.Name = "HowAreYou"
+        Me.HowAreYou.Size = New System.Drawing.Size(132, 24)
+        Me.HowAreYou.TabIndex = 272
+        Me.HowAreYou.Text = "How are you?"
+        Me.HowAreYou.UseVisualStyleBackColor = True
         '
         'TodayQ
         '
@@ -1442,17 +1447,64 @@ Partial Class Form1
         Me.Story4.Text = "Story2"
         Me.Story4.UseVisualStyleBackColor = True
         '
+        'chkAutoAction
+        '
+        Me.chkAutoAction.AutoSize = True
+        Me.chkAutoAction.Location = New System.Drawing.Point(379, 547)
+        Me.chkAutoAction.Name = "chkAutoAction"
+        Me.chkAutoAction.Size = New System.Drawing.Size(71, 17)
+        Me.chkAutoAction.TabIndex = 280
+        Me.chkAutoAction.Text = "Automate"
+        Me.chkAutoAction.UseVisualStyleBackColor = True
+        '
+        'lblSpeechHeard
+        '
+        Me.lblSpeechHeard.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSpeechHeard.Location = New System.Drawing.Point(376, 453)
+        Me.lblSpeechHeard.Name = "lblSpeechHeard"
+        Me.lblSpeechHeard.Size = New System.Drawing.Size(261, 79)
+        Me.lblSpeechHeard.TabIndex = 279
+        Me.lblSpeechHeard.Text = "Fritz Heard: "
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(373, 431)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(146, 13)
+        Me.Label22.TabIndex = 278
+        Me.Label22.Text = "SPEECH RECOGNITION"
+        '
+        'tmrSpeech
+        '
+        Me.tmrSpeech.Enabled = True
+        '
+        'Script4
+        '
+        Me.Script4.Location = New System.Drawing.Point(943, 416)
+        Me.Script4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Script4.Name = "Script4"
+        Me.Script4.Size = New System.Drawing.Size(51, 24)
+        Me.Script4.TabIndex = 281
+        Me.Script4.Text = "Script 4"
+        Me.Script4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(996, 575)
+        Me.ClientSize = New System.Drawing.Size(1004, 572)
+        Me.Controls.Add(Me.Script4)
+        Me.Controls.Add(Me.chkAutoAction)
+        Me.Controls.Add(Me.lblSpeechHeard)
+        Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Story4)
         Me.Controls.Add(Me.YoureCool)
         Me.Controls.Add(Me.TodayACont)
         Me.Controls.Add(Me.TodayA)
         Me.Controls.Add(Me.TodayQ)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.HowAreYou)
         Me.Controls.Add(Me.SeeYou)
         Me.Controls.Add(Me.Bye)
         Me.Controls.Add(Me.Label21)
@@ -1710,11 +1762,16 @@ Partial Class Form1
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Bye As System.Windows.Forms.Button
     Friend WithEvents SeeYou As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents HowAreYou As System.Windows.Forms.Button
     Friend WithEvents TodayQ As System.Windows.Forms.Button
     Friend WithEvents TodayA As System.Windows.Forms.Button
     Friend WithEvents TodayACont As System.Windows.Forms.Button
     Friend WithEvents YoureCool As System.Windows.Forms.Button
     Friend WithEvents Story4 As System.Windows.Forms.Button
+    Friend WithEvents chkAutoAction As System.Windows.Forms.CheckBox
+    Friend WithEvents lblSpeechHeard As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents tmrSpeech As System.Windows.Forms.Timer
+    Friend WithEvents Script4 As System.Windows.Forms.Button
 
 End Class
